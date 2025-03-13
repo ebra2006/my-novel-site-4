@@ -80,3 +80,43 @@ button:hover, .btn:hover {
     border-left: 5px solid #f0f;
     box-shadow: 0 0 10px #f0f;
 }
+/* تحسين توسيط العناصر على الشاشات الكبيرة */
+@media (min-width: 768px) {
+    .login-container {
+        width: 400px; /* زيادة عرض الفورم على الشاشات الكبيرة */
+        padding: 40px;
+    }
+    
+    .login-container input {
+        font-size: 20px; /* تكبير الخط */
+        padding: 12px;
+    }
+    
+    .login-container button {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 26px; /* تكبير الخط */
+        margin: 0 30px; /* زيادة المسافات بين العناصر */
+    }
+}
+
+/* تحسين التصميم على الشاشات الصغيرة (الموبايل) */
+@media (max-width: 767px) {
+    .login-container {
+        width: 90%; /* جعل العرض مناسبًا للموبايل */
+    }
+    
+    .login-container input,
+    .login-container button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 20px;
+        margin: 0 15px;
+    }
+}
