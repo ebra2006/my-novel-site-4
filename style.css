@@ -132,15 +132,4 @@ body {
     align-items: center;
 }
 
-/* ✨ تأثير النيون المتوهج للعناوين والنصوص */
-h1, h2, h3, p, a {
-    color: #00ffff; /* أزرق نيون */
-    text-shadow: 0px 0px 10px #00ffff, 0px 0px 20px #0088ff;
-}
 
-/* 🌀 تحريك التدرج اللوني */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
