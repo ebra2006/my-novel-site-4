@@ -120,3 +120,27 @@ button:hover, .btn:hover {
         margin: 0 15px;
     }
 }
+/* 🌌 خلفية متدرجة بألوان تناسب الذكاء الاصطناعي */
+body {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0c1226);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✨ تأثير النيون المتوهج للعناوين والنصوص */
+h1, h2, h3, p, a {
+    color: #00ffff; /* أزرق نيون */
+    text-shadow: 0px 0px 10px #00ffff, 0px 0px 20px #0088ff;
+}
+
+/* 🌀 تحريك التدرج اللوني */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
