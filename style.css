@@ -1,68 +1,82 @@
 /* General Styles */
+/* إعدادات عامة */
 body {
     font-family: Arial, sans-serif;
+    background-color: #0a0a0a; /* خلفية داكنة جدًا */
+    color: #fff; /* نص أبيض */
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: white;
 }
 
-/* Header and Navigation */
-header {
-    background-color: #1e1e1e;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    color: #a0a0a0;
-    text-decoration: none;
-}
-
-/* Sections */
-section {
-    padding: 20px;
-    margin: 20px 0;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-/* Footer */
-footer {
-    background-color: #1e1e1e;
-    padding: 10px;
+/* شريط التنقل */
+nav {
+    background-color: rgba(20, 20, 20, 0.9); /* شفاف قليلاً */
+    padding: 15px;
     text-align: center;
 }
 
-button {
-    background-color: #6200ea;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+nav a {
+    color: #0ff; /* أزرق نيون */
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f0f; /* بنفسجي نيون */
+    text-shadow: 0 0 10px #f0f;
+}
+
+/* العناوين */
+h1, h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #0ff; /* لون نيون */
+    text-shadow: 0 0 15px #0ff;
+}
+
+/* الفقرات */
+p {
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+/* الأزرار */
+button, .btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    font-size: 16px;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: 0.3s;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+button:hover, .btn:hover {
+    background-color: #0ff;
+    color: #000;
+    box-shadow: 0 0 15px #0ff;
 }
 
-.fade-in {
-    animation: fadeIn 1s ease-in-out;
+/* الفصول */
+.chapter {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-left: 5px solid #0ff;
+    transition: 0.3s;
+}
+
+.chapter:hover {
+    border-left: 5px solid #f0f;
+    box-shadow: 0 0 10px #f0f;
 }
