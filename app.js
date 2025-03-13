@@ -1,3 +1,4 @@
+console.log("app.js loaded!");
 document.addEventListener("DOMContentLoaded", function() {
     // Load the chapters dynamically
     const chapters = [
