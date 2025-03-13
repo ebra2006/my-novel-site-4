@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Book</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Your Book Title</h1>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#chapters">Chapters</a></li>
+                    <li><a href="#about">About the Author</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to My Book</h2>
+            <p>Explore the world of my story, written just for you.</p>
+        </section>
+
+        <section id="chapters">
+            <h2>Chapters</h2>
+            <div id="chapter-list">
+                <!-- Chapters will be dynamically listed here -->
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About the Author</h2>
+            <p id="author-description">This will be your description.</p>
+        </section>
+
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="password" placeholder="Password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Your Book. All rights reserved.</p>
+    </footer>
+</body>
+</html>
