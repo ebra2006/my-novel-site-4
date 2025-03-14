@@ -30,3 +30,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+
+particlesJS("particles-js", {
+    particles: {
+        number: { value: 80 },
+        color: { value: "#00ffea" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5, random: true },
+        size: { value: 3, random: true },
+        move: { speed: 3, direction: "none", out_mode: "out" }
+    },
+    interactivity: {
+        events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+            repulse: { distance: 100 },
+            push: { particles_nb: 4 }
+        }
+    }
+});
