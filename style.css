@@ -1,22 +1,21 @@
-/* General Styles */
 /* إعدادات عامة */
 body {
     font-family: Arial, sans-serif;
-    background-color: #0a0a0a; /* خلفية داكنة جدًا */
-    color: #fff; /* نص أبيض */
+    background-color: #0a0a0a;
+    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 /* شريط التنقل */
 nav {
-    background-color: rgba(20, 20, 20, 0.9); /* شفاف قليلاً */
+    background-color: rgba(20, 20, 20, 0.9);
     padding: 15px;
     text-align: center;
 }
 
 nav a {
-    color: #0ff; /* أزرق نيون */
+    color: #0ff;
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
@@ -24,25 +23,47 @@ nav a {
 }
 
 nav a:hover {
-    color: #f0f; /* بنفسجي نيون */
+    color: #f0f;
     text-shadow: 0 0 10px #f0f;
 }
 
-/* العناوين */
-h1, h2 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin: 20px 0;
-    color: #0ff; /* لون نيون */
-    text-shadow: 0 0 15px #0ff;
+/* تهيئة التخطيط العام */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-/* الفقرات */
-p {
+/* القائمة الجانبية */
+.sidebar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
     text-align: center;
-    font-size: 18px;
-    opacity: 0.8;
+}
+
+/* ضبط محتوى الصفحة */
+.main-content {
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* الفصول */
+.chapter {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px auto;
+    width: 100%;
+    border-left: 5px solid #0ff;
+    transition: 0.3s;
+}
+
+.chapter:hover {
+    border-left: 5px solid #f0f;
+    box-shadow: 0 0 10px #f0f;
 }
 
 /* الأزرار */
@@ -66,143 +87,23 @@ button:hover, .btn:hover {
     box-shadow: 0 0 15px #0ff;
 }
 
-/* الفصول */
-.chapter {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
-    margin: 10px auto;
-    width: 80%;
-    border-left: 5px solid #0ff;
-    transition: 0.3s;
-}
-
-.chapter:hover {
-    border-left: 5px solid #f0f;
-    box-shadow: 0 0 10px #f0f;
-}
-/* تحسين توسيط العناصر على الشاشات الكبيرة */
-@media (min-width: 768px) {
-    .login-container {
-        width: 400px; /* زيادة عرض الفورم على الشاشات الكبيرة */
-        padding: 40px;
-    }
-    
-    .login-container input {
-        font-size: 20px; /* تكبير الخط */
-        padding: 12px;
-    }
-    
-    .login-container button {
-        font-size: 20px;
-        padding: 12px;
-    }
-
-    nav a {
-        font-size: 26px; /* تكبير الخط */
-        margin: 0 30px; /* زيادة المسافات بين العناصر */
-    }
-}
-
-/* تحسين التصميم على الشاشات الصغيرة (الموبايل) */
-@media (max-width: 767px) {
-    .login-container {
-        width: 90%; /* جعل العرض مناسبًا للموبايل */
-    }
-    
-    .login-container input,
-    .login-container button {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    nav a {
-        font-size: 20px;
-        margin: 0 15px;
-    }
-}
-
-
-
-#wattpad-links {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* خلفية شفافة قليلاً */
-    border-radius: 10px;
-}
-
-#wattpad-links h2, #wattpad-links h3 {
-    color: #00ffff; /* لون أزرق نيون */
-    text-shadow: 0px 0px 10px #00ffff;
-}
-
-#wattpad-links p {
-    font-size: 18px;
-    color: white;
-    margin-bottom: 10px;
-}
-
-#wattpad-links a {
-    color: #00ffff;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-#wattpad-links a:hover {
-    text-shadow: 0px 0px 10px #00ffff;
-    transform: scale(1.05);
-}
-
-#wattpad-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-#wattpad-links li {
-    margin: 10px 0;
-}
-/* ضبط الخلفية المتدرجة المتغيرة */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-/* تأثير الخلفية المتغيرة */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* تأثير الجزيئات */
-#particles-js {
-    position: absolute;
+/* تحسين الفوتر */
+.footer {
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* تحسين النص */
-h1 {
-    font-size: 3rem;
-    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
-}
+/* تحسين التخطيط على الشاشات الصغيرة */
+@media (max-width: 767px) {
+    .sidebar {
+        order: -1; /* يجعل القائمة الجانبية تظهر أولاً */
+        width: 100%;
+    }
 
-p {
-    font-size: 1.2rem;
-    opacity: 0.8;
+    .main-content {
+        width: 95%;
+    }
 }
-
