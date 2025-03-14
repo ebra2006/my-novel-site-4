@@ -56,3 +56,11 @@ particlesJS("particles-js", {
 function toggleMenu() {
     document.querySelector(".nav-links").classList.toggle("nav-open");
 }
+
+
+
+
+function toggleMenu() {
+    let menu = document.querySelector(".nav-links");
+    menu.classList.toggle("nav-open");
+}
