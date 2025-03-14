@@ -114,34 +114,63 @@ button:hover, .btn:hover {
 
 /* زر ☰ */
 .menu-toggle {
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     padding: 10px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
+    position: fixed;
+    left: 15px;
+    top: 15px;
     background: #222;
     color: white;
     border-radius: 5px;
-    z-index: 1000;
-    display: none; /* افتراضيًا مخفي على الشاشات الكبيرة */
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* شريط التنقل مغلق افتراضيًا */
+/* القائمة الجانبية */
 .nav-links {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 200px;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px;
-    box-shadow: 0 0 10px #0ff;
+    position: fixed;
+    left: -250px; /* مخفية خارج الشاشة */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 3px 0 10px rgba(0, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease-in-out;
 }
 
-/* عند تفعيل القائمة */
+/* تفعيل القائمة */
 .nav-open {
-    display: block !important;
+    left: 0 !important;
+}
+
+/* تنسيق الروابط */
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 24px;
+    color: cyan;
+    transition: color 0.3s ease-in-out;
+}
+
+/* تأثير النيون */
+.nav-links a:hover {
+    color: magenta;
+    text-shadow: 0 0 5px magenta, 0 0 10px magenta;
 }
 
 /* إظهار زر ☰ فقط في الشاشات الصغيرة */
@@ -151,11 +180,6 @@ button:hover, .btn:hover {
     }
 
     .nav-links {
-        position: absolute;
-        left: 0;
-        top: 50px;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        display: none;
+        width: 200px;
     }
 }
