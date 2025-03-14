@@ -1,4 +1,3 @@
-/* إعدادات عامة */
 body {
     font-family: Arial, sans-serif;
     background-color: #0a0a0a;
@@ -102,19 +101,14 @@ button:hover, .btn:hover {
         order: -1; /* يجعل القائمة الجانبية تظهر أولاً */
         width: 100%;
     }
-
     .main-content {
         width: 95%;
     }
 }
 
-
-
-
-
-/* زر ☰ */
+/* زر ☰ (محدث) */
 .menu-toggle {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
     font-size: 30px;
@@ -123,6 +117,7 @@ button:hover, .btn:hover {
     padding: 10px 15px;
     border-radius: 5px;
     color: white;
+    z-index: 1000; /* تأكد من ظهوره فوق المحتوى */
 }
 
 /* تنسيق القائمة الجانبية */
@@ -141,8 +136,8 @@ button:hover, .btn:hover {
 }
 
 /* عند فتح القائمة */
-.nav-open .nav-links {
-    left: 0 !important;
+.nav-links.nav-open {
+    left: 0;
 }
 
 /* تنسيق الروابط */
@@ -164,8 +159,6 @@ button:hover, .btn:hover {
 .nav-links ul li a:hover {
     color: #00ffff;
 }
-
-
 
 a {
     color: #00ffff !important; /* أزرق نيون */
