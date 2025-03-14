@@ -61,6 +61,6 @@ function toggleMenu() {
 
 
 function toggleMenu() {
-    let menu = document.querySelector(".nav-links");
-    menu.classList.toggle("nav-open");
+    let navbar = document.getElementById("navbar");
+    navbar.classList.toggle("nav-open");
 }
