@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veron Novel</title>
-<link rel="stylesheet" href="style.css">
-<!-- <script src="app.js" defer></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veron Novel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+
     <div id="particles-js"></div>
-<header>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav>
-        <div class="logo">
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-            <h1>Veron (Conflict Of Minds)</h1>
-        </div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#chapters">Chapters</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#login">Login</a></li>
-            </ul>
-        </div>
-    </nav>
-</header>
+
+    <header>
+        <!-- زر القائمة ☰ -->
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <nav id="navbar">
+            <div class="logo">
+                <h1>Veron (Conflict Of Minds)</h1>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#chapters">Chapters</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
 <main>
     <section id="home">
