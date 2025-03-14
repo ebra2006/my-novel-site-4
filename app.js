@@ -1,4 +1,5 @@
 console.log("app.js loaded!");
+
 document.addEventListener("DOMContentLoaded", function() {
     // Load the chapters dynamically
     const chapters = [
@@ -6,9 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         { title: "Chapter 2", link: "#chapter2" },
         { title: "Chapter 3", link: "#chapter3" }
     ];
-
     const chapterList = document.getElementById("chapter-list");
-
     chapters.forEach(chapter => {
         let chapterElement = document.createElement("div");
         chapterElement.classList.add("chapter");
@@ -21,8 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
-
-        // Dummy login check
         if (email === "test@example.com" && password === "password") {
             alert("Login successful");
         } else {
@@ -30,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-
-
 
 particlesJS("particles-js", {
     particles: {
@@ -53,14 +48,11 @@ particlesJS("particles-js", {
         }
     }
 });
+
+// Fixing toggleMenu function
 function toggleMenu() {
-    document.querySelector(".nav-links").classList.toggle("nav-open");
-}
-
-
-
-
-function toggleMenu() {
-    let navbar = document.getElementById("navbar");
-    navbar.classList.toggle("nav-open");
+    let navLinks = document.querySelector(".nav-links");
+    if (navLinks) {
+        navLinks.classList.toggle("nav-open");
+    }
 }
