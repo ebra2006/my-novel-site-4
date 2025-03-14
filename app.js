@@ -53,3 +53,6 @@ particlesJS("particles-js", {
         }
     }
 });
+function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("nav-open");
+}
