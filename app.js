@@ -60,11 +60,27 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Toggle Menu Function
 function toggleMenu() {
-    let navLinks = document.querySelector(".nav-links");
-    if (navLinks) {
-        navLinks.classList.toggle("nav-open");
-        console.log("تم تبديل القائمة الجانبية"); // للتحقق من تشغيل الوظيفة
-    } else {
-        console.error("العنصر .nav-links غير موجود!");
-    }
-}
+         console.log("تم النقر على زر القائمة"); // للتحقق من تنفيذ الوظيفة
+         let navLinks = document.querySelector(".nav-links");
+         if (navLinks) {
+             navLinks.classList.toggle("nav-open");
+             console.log("تم تبديل القائمة الجانبية");
+         } else {
+             console.error("العنصر .nav-links غير موجود!");
+         }
+     }
+
+
+
+
+function toggleMenu(event) {
+         event.stopPropagation(); // يمنع انتشار الحدث إلى العناصر الأخرى
+         console.log("تم النقر على زر القائمة");
+         let navLinks = document.querySelector(".nav-links");
+         if (navLinks) {
+             navLinks.classList.toggle("nav-open");
+             console.log("تم تبديل القائمة الجانبية");
+         } else {
+             console.error("العنصر .nav-links غير موجود!");
+         }
+     }
