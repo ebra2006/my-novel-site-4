@@ -162,4 +162,47 @@ button:hover, .btn:hover {
 #wattpad-links li {
     margin: 10px 0;
 }
+/* ضبط الخلفية المتدرجة المتغيرة */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* تأثير الخلفية المتغيرة */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* تأثير الجزيئات */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* تحسين النص */
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+}
+
+p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
 
