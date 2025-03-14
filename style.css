@@ -164,3 +164,14 @@ button:hover, .btn:hover {
 .nav-links ul li a:hover {
     color: #00ffff;
 }
+
+
+
+a {
+    color: #00ffff !important; /* أزرق نيون */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00b3b3 !important; /* لون أغمق عند التمرير */
+}
