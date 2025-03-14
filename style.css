@@ -107,3 +107,55 @@ button:hover, .btn:hover {
         width: 95%;
     }
 }
+
+
+
+
+
+/* زر ☰ */
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none; /* افتراضيًا مخفي على الشاشات الكبيرة */
+}
+
+/* شريط التنقل مغلق افتراضيًا */
+.nav-links {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 200px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* عند تفعيل القائمة */
+.nav-open {
+    display: block !important;
+}
+
+/* إظهار زر ☰ فقط في الشاشات الصغيرة */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: none;
+    }
+}
