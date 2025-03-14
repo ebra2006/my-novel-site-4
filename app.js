@@ -49,10 +49,13 @@ particlesJS("particles-js", {
     }
 });
 
-// Fixing toggleMenu function
+
 function toggleMenu() {
     let navLinks = document.querySelector(".nav-links");
     if (navLinks) {
         navLinks.classList.toggle("nav-open");
+        console.log("تم تبديل القائمة الجانبية"); // للتحقق من تشغيل الوظيفة
+    } else {
+        console.error("العنصر .nav-links غير موجود!");
     }
 }
