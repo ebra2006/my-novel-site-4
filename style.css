@@ -283,3 +283,9 @@ a:hover {
         text-shadow: 0 0 5px #0ff, 0 0 8px #00f;
     }
 }
+
+.robot-image {
+    display: block;
+    margin: 20px auto; /* توسيط الصورة */
+    width: 150px; /* التحكم في الحجم */
+}
