@@ -178,37 +178,60 @@ a:hover {
 
 .social-links {
     margin-top: 15px;
+    text-align: center;
 }
 
 .social-btn {
     display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    border-radius: 5px;
+    margin: 8px;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
 }
 
 .facebook {
-    background: #1877f2;
-    color: white;
-    box-shadow: 0 0 10px #1877f2;
+    color: #00f7ff; /* أزرق نيون */
+    border-color: #00f7ff;
+    box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
 }
 
 .instagram {
-    background: #e4405f;
-    color: white;
-    box-shadow: 0 0 10px #e4405f;
+    color: #ff00ff; /* بنفسجي نيون */
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
 }
 
 .whatsapp {
-    background: #25d366;
-    color: white;
-    box-shadow: 0 0 10px #25d366;
+    color: #00ff7b; /* أخضر نيون */
+    border-color: #00ff7b;
+    box-shadow: 0 0 10px #00ff7b, 0 0 20px #00ff7b;
 }
 
+/* تأثير عند تمرير الماوس */
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px white;
+    transform: scale(1.1);
+}
+
+/* تأثير متحرك يضيء الأزرار */
+@keyframes neonGlow {
+    0% { box-shadow: 0 0 5px #fff; }
+    50% { box-shadow: 0 0 15px #fff, 0 0 25px #fff; }
+    100% { box-shadow: 0 0 5px #fff; }
+}
+
+.social-btn {
+    animation: neonGlow 1.5s infinite alternate;
+}
 .social-btn:hover {
     opacity: 0.8;
 }
