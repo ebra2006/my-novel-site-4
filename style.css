@@ -287,7 +287,7 @@ a:hover {
 .robot-image {
     display: block;
     margin: 20px auto; /* توسيط الصورة */
-    width: 700px; /* التحكم في الحجم */
+    width: 50px; /* التحكم في الحجم */
 }
 
 
