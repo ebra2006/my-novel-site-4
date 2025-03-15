@@ -335,3 +335,49 @@ body {
         font-size: 2.5rem;
     }
 }
+
+
+
+
+.robot-image {
+    display: block;
+    margin: 20px auto; /* يضع الصورة في المنتصف */
+    width: 150px; /* غير الحجم حسب ما يناسبك */
+    height: auto;
+}
+
+
+
+
+
+
+/* تحسين التناسب مع الشاشات الكبيرة */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 80%;
+        margin: auto;
+    }
+}
+
+/* تحسين التناسب مع الشاشات المتوسطة (تابلت) */
+@media (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+    .robot-image {
+        width: 120px;
+    }
+}
+
+/* تحسين التناسب مع الشاشات الصغيرة (موبايل) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 95%;
+    }
+    .robot-image {
+        width: 100px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+}
