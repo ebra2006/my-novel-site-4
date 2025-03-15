@@ -209,11 +209,7 @@ a:hover {
     box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
 }
 
-.whatsapp {
-    color: #00ff7b; /* أخضر نيون */
-    border-color: #00ff7b;
-    box-shadow: 0 0 10px #00ff7b, 0 0 20px #00ff7b;
-}
+
 
 /* تأثير عند تمرير الماوس */
 .social-btn:hover {
@@ -289,15 +285,17 @@ a:hover {
 
 .robot-image {
     display: block;
-    width: 100%; /* جعل الصورة بعرض الموقع */
-    max-width: 100vw; /* منع تجاوز الحدود */
+    width: 100%; /* جعل الصورة تمتد بعرض الشاشة */
+    max-width: 600px; /* تحديد أقصى عرض لها على الشاشات الكبيرة */
     height: auto; /* الحفاظ على تناسب الأبعاد */
-    object-fit: cover; /* منع التشوه */
+    margin: 0 auto; /* توسيط الصورة */
+    object-fit: cover;
 }
+
 /* تحسين الصورة على الهواتف */
 @media (max-width: 768px) {
     .robot-image {
-        height: 250px; /* أو أي ارتفاع مناسب */
+        max-width: 90%; /* جعلها أصغر قليلًا على الهواتف */
     }
 }
 
