@@ -84,3 +84,23 @@ function toggleMenu(event) {
              console.error("العنصر .nav-links غير موجود!");
          }
      }
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let titleText = "Veron (Conflict Of Minds)"; // النص اللي عايز يظهر حرف بحرف
+    let titleElement = document.getElementById("typing-title");
+    let index = 0;
+
+    function typeTitle() {
+        if (index < titleText.length) {
+            titleElement.innerHTML += titleText.charAt(index);
+            index++;
+            setTimeout(typeTitle, 100); // تحكم في سرعة الكتابة (قلل الرقم للسرعة)
+        }
+    }
+
+    typeTitle(); // تشغيل التأثير عند تحميل الصفحة
+});
