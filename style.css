@@ -284,15 +284,16 @@ a:hover {
     }
 }
 
+
+
+
 .robot-image {
+    width: 100%; /* يجعل الصورة تمتد بعرض الصفحة */
+    height: 400px; /* تحديد الطول حسب الحاجة */
+    object-fit: cover; /* يضمن أن الصورة تملأ المساحة دون تشويه */
     display: block;
-    margin: 20px auto; /* توسيط الصورة */
-    width: 50px; /* التحكم في الحجم */
+    margin: 0 auto;
 }
-
-
-
-
 
 
 
