@@ -287,64 +287,12 @@ a:hover {
 .robot-image {
     display: block;
     margin: 20px auto; /* توسيط الصورة */
-    width: 150px; /* التحكم في الحجم */
+    width: 400px; /* التحكم في الحجم */
 }
 
 
 
 
-
-
-
-
-
-
-/* قاعدة عامة تجعل التصميم متجاوبًا */
-body {
-    max-width: 100%;
-    overflow-x: hidden; /* لمنع التمرير الأفقي */
-}
-
-/* للهواتف الصغيرة (أقل من 600px) */
-@media (max-width: 600px) {
-    #neon-title {
-        font-size: 1.8rem; /* تصغير العنوان */
-        text-align: center;
-    }
-
-    img {
-        width: 80%; /* تصغير الصور لتناسب الشاشة */
-        height: auto;
-    }
-}
-
-/* للأجهزة اللوحية (بين 600px و 1024px) */
-@media (min-width: 600px) and (max-width: 1024px) {
-    #neon-title {
-        font-size: 2.2rem;
-    }
-
-    img {
-        width: 70%;
-    }
-}
-
-/* لأجهزة الكمبيوتر والشاشات الكبيرة */
-@media (min-width: 1025px) {
-    #neon-title {
-        font-size: 2.5rem;
-    }
-}
-
-
-
-
-.robot-image {
-    display: block;
-    margin: 20px auto; /* يضع الصورة في المنتصف */
-    width: 150px; /* غير الحجم حسب ما يناسبك */
-    height: auto;
-}
 
 
 
@@ -381,3 +329,4 @@ body {
         font-size: 1.2rem;
     }
 }
+
