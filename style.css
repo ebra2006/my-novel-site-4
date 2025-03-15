@@ -168,3 +168,47 @@ a {
 a:hover {
     color: #00b3b3 !important; /* لون أغمق عند التمرير */
 }
+
+
+
+
+
+
+
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.facebook {
+    background: #1877f2;
+    color: white;
+    box-shadow: 0 0 10px #1877f2;
+}
+
+.instagram {
+    background: #e4405f;
+    color: white;
+    box-shadow: 0 0 10px #e4405f;
+}
+
+.whatsapp {
+    background: #25d366;
+    color: white;
+    box-shadow: 0 0 10px #25d366;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
