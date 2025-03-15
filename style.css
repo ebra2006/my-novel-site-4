@@ -283,3 +283,10 @@ a:hover {
         text-shadow: 0 0 10px #0ff, 0 0 15px #0ff, 0 0 25px #00f, 0 0 35px #00f;
     }
 }
+
+
+#neon-title {
+    color: #0ff; /* لون النص */
+    text-shadow: 0 0 2px #0ff, 0 0 4px #00f; /* تقليل كثافة التوهج */
+    font-weight: bold; /* لجعل النص أكثر وضوحًا */
+}
