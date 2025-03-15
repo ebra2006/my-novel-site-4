@@ -89,18 +89,21 @@ function toggleMenu(event) {
 
 
 
+
 document.addEventListener("DOMContentLoaded", function () {
-    let titleText = "Veron (Conflict Of Minds)"; // النص اللي عايز يظهر حرف بحرف
     let titleElement = document.getElementById("typing-title");
+    let titleText = "Veron (Conflict Of Minds)"; // نص العنوان
     let index = 0;
 
-    function typeTitle() {
+    function typeEffect() {
         if (index < titleText.length) {
-            titleElement.innerHTML += titleText.charAt(index);
+            titleElement.innerHTML += titleText[index]; // إضافة حرف جديد
             index++;
-            setTimeout(typeTitle, 100); // تحكم في سرعة الكتابة (قلل الرقم للسرعة)
+            setTimeout(typeEffect, 100); // التحكم في سرعة الكتابة (100ms بين كل حرف)
         }
     }
 
-    typeTitle(); // تشغيل التأثير عند تحميل الصفحة
+    // مسح النص قبل بدء الكتابة
+    titleElement.innerHTML = "";
+    typeEffect(); // بدء تأثير الكتابة
 });
