@@ -266,27 +266,20 @@ a:hover {
 #neon-title {
     font-family: 'Orbitron', sans-serif; /* خط مستقبلي */
     font-size: 2.5rem;
-    color: #0ff; /* لون أساسي أزرق نيون */
+    color: #0ff; /* لون نيون */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+    text-shadow: 0 0 3px #0ff, 0 0 6px #00f; /* تقليل التوهج */
     animation: neonGlow 1.5s ease-in-out infinite alternate;
 }
 
 /* تأثير وميض التوهج */
 @keyframes neonGlow {
     0% {
-        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #00f;
+        text-shadow: 0 0 2px #0ff, 0 0 4px #00f;
     }
     100% {
-        text-shadow: 0 0 10px #0ff, 0 0 15px #0ff, 0 0 25px #00f, 0 0 35px #00f;
+        text-shadow: 0 0 5px #0ff, 0 0 8px #00f;
     }
-}
-
-
-#neon-title {
-    color: #0ff; /* لون النص */
-    text-shadow: 0 0 2px #0ff, 0 0 4px #00f; /* تقليل كثافة التوهج */
-    font-weight: bold; /* لجعل النص أكثر وضوحًا */
 }
