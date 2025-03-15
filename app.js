@@ -87,23 +87,3 @@ function toggleMenu(event) {
 
 
 
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    let titleElement = document.getElementById("typing-title");
-    let titleText = "Veron (Conflict Of Minds)"; // نص العنوان
-    let index = 0;
-
-    function typeEffect() {
-        if (index < titleText.length) {
-            titleElement.innerHTML += titleText[index]; // إضافة حرف جديد
-            index++;
-            setTimeout(typeEffect, 100); // التحكم في سرعة الكتابة (100ms بين كل حرف)
-        }
-    }
-
-    // مسح النص قبل بدء الكتابة
-    titleElement.innerHTML = "";
-    typeEffect(); // بدء تأثير الكتابة
-});
