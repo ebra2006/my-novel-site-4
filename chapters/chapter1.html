@@ -207,5 +207,35 @@ By : Ibrahim Mohamed
 
 
         <script src="../app.js"></script>
+
+
+
+
+
+
+
+<button onclick="toggleCommentForm()" class="add-comment-btn">أضف تعليقًا</button>
+<div id="commentFormContainer" style="display: none;">
+    <textarea placeholder="اكتب تعليقك هنا..."></textarea>
+    <button onclick="submitComment()">إرسال</button>
+</div>
+<script>
+    function toggleCommentForm() {
+        let form = document.getElementById("commentFormContainer");
+        form.style.display = (form.style.display === "none") ? "block" : "none";
+    }
+
+    function submitComment() {
+        alert("تم إرسال تعليقك!");
+    }
+</script>
+
+
+
+
+
+
+
+        
 </body>
 </html>
