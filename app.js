@@ -99,27 +99,54 @@ function toggleMenu(event) {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // أنشئ عنصر الـ div الذي يحتوي على نموذج التعليقات
-    let commentContainer = document.createElement("div");
-    commentContainer.innerHTML = 
-        <button onclick="toggleCommentForm()" class="add-comment-btn">أضف تعليقًا</button>
-        <div id="commentFormContainer" style="display: none;">
-            <textarea placeholder="اكتب تعليقك هنا..."></textarea>
-            <button onclick="submitComment()">إرسال</button>
-        </div>
-    ;
+import { db, collection, addDoc, serverTimestamp } from "./firebase-config.js";
 
-    // أضف التعليقات أسفل كل فصل تلقائيًا
-    document.body.appendChild(commentContainer);
-});
-
+// إظهار وإخفاء نموذج التعليق
 function toggleCommentForm() {
     let form = document.getElementById("commentFormContainer");
     form.style.display = (form.style.display === "none") ? "block" : "none";
 }
 
-function submitComment() {
-    alert("تم إرسال تعليقك!");
+// إرسال التعليق إلى Firestore
+async function submitComment() {
+    let textarea = document.getElementById("commentInput");
+    let commentText = textarea.value.trim();
+
+    if (commentText === "") {
+        alert("يرجى كتابة تعليق قبل الإرسال!");
+        return;
+    }
+
+    try {
+        await addDoc(collection(db, "comments"), {
+            text: commentText,
+            timestamp: serverTimestamp() // حفظ التوقيت تلقائيًا
+        });
+
+        alert("تم إرسال تعليقك!");
+        textarea.value = ""; // إعادة تعيين الحقل بعد الإرسال
+        loadComments(); // تحديث التعليقات بعد الإضافة
+    } catch (error) {
+        console.error("خطأ في إرسال التعليق:", error);
+    }
 }
+
+// تحميل التعليقات من Firestore وعرضها في الصفحة
+async function loadComments() {
+    const commentList = document.getElementById("commentList");
+    commentList.innerHTML = ""; // مسح التعليقات السابقة وإعادة تحميلها
+
+    const querySnapshot = await getDocs(collection(db, "comments"));
+    querySnapshot.forEach((doc) => {
+        let commentData = doc.data();
+        let commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+        commentElement.textContent = ${commentData.text} - ${new Date(commentData.timestamp?.toDate()).toLocaleString()};
+
+        commentList.appendChild(commentElement);
+    });
+}
+
+// تحميل التعليقات عند فتح الصفحة
+document.addEventListener("DOMContentLoaded", loadComments);
 
