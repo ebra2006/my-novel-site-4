@@ -206,19 +206,26 @@ By : Ibrahim Mohamed
 
 
 
-        <script src="../app.js"></script>
 
 
 
 
 
 
+
+
+
+        
 
 <button onclick="toggleCommentForm()" class="add-comment-btn">أضف تعليقًا</button>
+
 <div id="commentFormContainer" style="display: none;">
-    <textarea placeholder="اكتب تعليقك هنا..."></textarea>
+    <textarea id="commentInput" placeholder="اكتب تعليقك هنا..."></textarea>
     <button onclick="submitComment()">إرسال</button>
 </div>
+
+<div id="commentList"></div>
+
 <script>
     function toggleCommentForm() {
         let form = document.getElementById("commentFormContainer");
@@ -226,7 +233,25 @@ By : Ibrahim Mohamed
     }
 
     function submitComment() {
-        alert("تم إرسال تعليقك!");
+        let textarea = document.getElementById("commentInput");
+        let commentText = textarea.value.trim();
+
+        if (commentText === "") {
+            alert("يرجى كتابة تعليق قبل الإرسال!");
+            return;
+        }
+
+        // إنشاء عنصر جديد للتعليق
+        let commentList = document.getElementById("commentList");
+        let commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+        commentElement.textContent = commentText;
+
+        // إضافة التعليق إلى القائمة
+        commentList.appendChild(commentElement);
+
+        // إعادة تعيين مربع النص
+        textarea.value = "";
     }
 </script>
 
@@ -234,8 +259,10 @@ By : Ibrahim Mohamed
 
 
 
+        
 
 
+        
         
 </body>
 </html>
