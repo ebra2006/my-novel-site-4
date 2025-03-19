@@ -231,14 +231,47 @@ By : Ibrahim Mohamed
 <!-- قائمة التعليقات -->
 <div id="commentList"></div>
 
-<!-- Firebase -->
+<!-- مكتبات Firebase -->
 <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
-<script src="../firebase-config.js"></script> <!-- ملف الإعدادات -->
+
+<!-- إعدادات Firebase -->
+<script src="../firebase-config.js"></script>
 
 <script>
-    // تفعيل Firebase
-    const db = firebase.database().ref("comments");
+    let db;
+    document.addEventListener("DOMContentLoaded", function() {
+        // تحقق من تحميل Firebase
+        if (!firebase.apps.length) {
+            alert("خطأ: Firebase لم يتم تحميله بشكل صحيح!");
+            return;
+        }
+        db = firebase.database().ref("/comments");
+
+        // تحميل التعليقات عند فتح الصفحة
+        db.on("child_added", function(snapshot) {
+            let data = snapshot.val();
+            let commentID = snapshot.key;
+
+            let commentElement = document.createElement("div");
+            commentElement.classList.add("comment");
+            commentElement.innerHTML = <p>${data.text}</p>
+                                        <small>${data.time}</small>
+                                        <button onclick="deleteComment('${commentID}')">حذف</button>;
+
+            document.getElementById("commentList").appendChild(commentElement);
+        });
+
+        // تحديث العرض بعد الحذف
+        db.on("child_removed", function(snapshot) {
+            let comments = document.querySelectorAll(".comment");
+            comments.forEach(comment => {
+                if (comment.innerHTML.includes(snapshot.val().text)) {
+                    comment.remove();
+                }
+            });
+        });
+    });
 
     function toggleCommentForm() {
         let form = document.getElementById("commentFormContainer");
@@ -255,6 +288,12 @@ By : Ibrahim Mohamed
             return;
         }
 
+        // تحقق من الاتصال بقاعدة البيانات
+        if (!db) {
+            alert("خطأ: قاعدة البيانات غير متصلة!");
+            return;
+        }
+
         // إضافة التعليق إلى Firebase
         let newCommentRef = db.push();
         newCommentRef.set({
@@ -266,38 +305,12 @@ By : Ibrahim Mohamed
         textarea.value = "";
     }
 
-    // تحميل التعليقات من Firebase
-    db.on("child_added", function(snapshot) {
-        let data = snapshot.val();
-        let commentID = snapshot.key;
-
-        let commentElement = document.createElement("div");
-        commentElement.classList.add("comment");
-        commentElement.innerHTML = <p>${data.text}</p>
-                                    <small>${data.time}</small>
-                                    <button onclick="deleteComment('${commentID}')">حذف</button>;
-
-        document.getElementById("commentList").appendChild(commentElement);
-    });
-
     function deleteComment(commentID) {
         if (confirm("هل تريد حذف هذا التعليق؟")) {
             db.child(commentID).remove();
         }
     }
-
-    // تحديث العرض بعد الحذف
-    db.on("child_removed", function(snapshot) {
-        let comments = document.querySelectorAll(".comment");
-        comments.forEach(comment => {
-            if (comment.innerHTML.includes(snapshot.val().text)) {
-                comment.remove();
-            }
-        });
-    });
 </script>
-
-
 
 
 
