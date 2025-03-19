@@ -87,3 +87,39 @@ function toggleMenu(event) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // أنشئ عنصر الـ div الذي يحتوي على نموذج التعليقات
+    let commentContainer = document.createElement("div");
+    commentContainer.innerHTML = 
+        <button onclick="toggleCommentForm()" class="add-comment-btn">أضف تعليقًا</button>
+        <div id="commentFormContainer" style="display: none;">
+            <textarea placeholder="اكتب تعليقك هنا..."></textarea>
+            <button onclick="submitComment()">إرسال</button>
+        </div>
+    ;
+
+    // أضف التعليقات أسفل كل فصل تلقائيًا
+    document.body.appendChild(commentContainer);
+});
+
+function toggleCommentForm() {
+    let form = document.getElementById("commentFormContainer");
+    form.style.display = (form.style.display === "none") ? "block" : "none";
+}
+
+function submitComment() {
+    alert("تم إرسال تعليقك!");
+}
+
