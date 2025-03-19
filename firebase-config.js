@@ -1,7 +1,6 @@
 // استيراد مكتبات Firebase المطلوبة
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 // تعريف المتغيرات البيئية
 const firebaseConfig = {
@@ -16,8 +15,7 @@ const firebaseConfig = {
 
 // تهيئة Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 // تصدير القيم لاستخدامها في الملفات الأخرى
-export { app, analytics, db };
+export { db, collection, addDoc, serverTimestamp };
