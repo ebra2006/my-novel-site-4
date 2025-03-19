@@ -344,25 +344,43 @@ a:hover {
 
 
 
-.chapter-container {
-    max-width: 800px;
-    margin: auto;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+.chapter-navigation {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-buttons {
-    margin-top: 20px;
+    display: flex;
+    gap: 10px;
 }
 
-.nav-buttons a {
+.nav-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #00e1ff;
+    color: white;
     text-decoration: none;
-    color: #00bfff;
-    font-size: 18px;
-    margin: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    min-width: 120px;
+    text-align: center;
 }
 
+.nav-button:hover {
+    background-color: #6a00ff;
+    transform: scale(1.05);
+}
+
+.main-button {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+}
 
 
 
