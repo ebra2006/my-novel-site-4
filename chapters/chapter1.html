@@ -236,40 +236,47 @@ By : Ibrahim Mohamed
 <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
 
 <!-- إعدادات Firebase -->
-<script src="../firebase-config.js"></script>
-
 <script>
-    let db;
-    document.addEventListener("DOMContentLoaded", function() {
-        // تحقق من تحميل Firebase
-        if (!firebase.apps.length) {
-            alert("خطأ: Firebase لم يتم تحميله بشكل صحيح!");
-            return;
-        }
-        db = firebase.database().ref("/comments");
+    // إعدادات Firebase (ضع الإعدادات الخاصة بك هنا)
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_AUTH_DOMAIN",
+        databaseURL: "YOUR_DATABASE_URL",
+        projectId: "YOUR_PROJECT_ID",
+        storageBucket: "YOUR_STORAGE_BUCKET",
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+        appId: "YOUR_APP_ID"
+    };
 
+    // تهيئة Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database().ref("/comments");
+
+    document.addEventListener("DOMContentLoaded", function () {
         // تحميل التعليقات عند فتح الصفحة
-        db.on("child_added", function(snapshot) {
+        db.on("child_added", function (snapshot) {
             let data = snapshot.val();
             let commentID = snapshot.key;
 
             let commentElement = document.createElement("div");
             commentElement.classList.add("comment");
-            commentElement.innerHTML = <p>${data.text}</p>
-                                        <small>${data.time}</small>
-                                        <button onclick="deleteComment('${commentID}')">حذف</button>;
+            commentElement.setAttribute("id", comment-${commentID});
+            commentElement.innerHTML = 
+                <p>${data.text}</p>
+                <small>${data.time}</small>
+                <button onclick="deleteComment('${commentID}')">حذف</button>
+            ;
 
             document.getElementById("commentList").appendChild(commentElement);
         });
 
         // تحديث العرض بعد الحذف
-        db.on("child_removed", function(snapshot) {
-            let comments = document.querySelectorAll(".comment");
-            comments.forEach(comment => {
-                if (comment.innerHTML.includes(snapshot.val().text)) {
-                    comment.remove();
-                }
-            });
+        db.on("child_removed", function (snapshot) {
+            let commentID = snapshot.key;
+            let commentElement = document.getElementById(comment-${commentID});
+            if (commentElement) {
+                commentElement.remove();
+            }
         });
     });
 
@@ -288,12 +295,6 @@ By : Ibrahim Mohamed
             return;
         }
 
-        // تحقق من الاتصال بقاعدة البيانات
-        if (!db) {
-            alert("خطأ: قاعدة البيانات غير متصلة!");
-            return;
-        }
-
         // إضافة التعليق إلى Firebase
         let newCommentRef = db.push();
         newCommentRef.set({
@@ -301,7 +302,7 @@ By : Ibrahim Mohamed
             time: timestamp
         });
 
-        // إعادة تعيين النص
+        // إعادة تعيين النص بعد الإرسال
         textarea.value = "";
     }
 
