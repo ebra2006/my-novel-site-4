@@ -217,16 +217,29 @@ By : Ibrahim Mohamed
 
         
 
+        
+
+<!-- زر إضافة التعليق -->
 <button onclick="toggleCommentForm()" class="add-comment-btn">أضف تعليقًا</button>
 
+<!-- نموذج إدخال التعليق -->
 <div id="commentFormContainer" style="display: none;">
     <textarea id="commentInput" placeholder="اكتب تعليقك هنا..."></textarea>
     <button onclick="submitComment()">إرسال</button>
 </div>
 
+<!-- قائمة التعليقات -->
 <div id="commentList"></div>
 
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
+<script src="../firebase-config.js"></script> <!-- ملف الإعدادات -->
+
 <script>
+    // تفعيل Firebase
+    const db = firebase.database().ref("comments");
+
     function toggleCommentForm() {
         let form = document.getElementById("commentFormContainer");
         form.style.display = (form.style.display === "none") ? "block" : "none";
@@ -235,24 +248,53 @@ By : Ibrahim Mohamed
     function submitComment() {
         let textarea = document.getElementById("commentInput");
         let commentText = textarea.value.trim();
+        let timestamp = new Date().toLocaleString();
 
         if (commentText === "") {
             alert("يرجى كتابة تعليق قبل الإرسال!");
             return;
         }
 
-        // إنشاء عنصر جديد للتعليق
-        let commentList = document.getElementById("commentList");
-        let commentElement = document.createElement("div");
-        commentElement.classList.add("comment");
-        commentElement.textContent = commentText;
+        // إضافة التعليق إلى Firebase
+        let newCommentRef = db.push();
+        newCommentRef.set({
+            text: commentText,
+            time: timestamp
+        });
 
-        // إضافة التعليق إلى القائمة
-        commentList.appendChild(commentElement);
-
-        // إعادة تعيين مربع النص
+        // إعادة تعيين النص
         textarea.value = "";
     }
+
+    // تحميل التعليقات من Firebase
+    db.on("child_added", function(snapshot) {
+        let data = snapshot.val();
+        let commentID = snapshot.key;
+
+        let commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+        commentElement.innerHTML = <p>${data.text}</p>
+                                    <small>${data.time}</small>
+                                    <button onclick="deleteComment('${commentID}')">حذف</button>;
+
+        document.getElementById("commentList").appendChild(commentElement);
+    });
+
+    function deleteComment(commentID) {
+        if (confirm("هل تريد حذف هذا التعليق؟")) {
+            db.child(commentID).remove();
+        }
+    }
+
+    // تحديث العرض بعد الحذف
+    db.on("child_removed", function(snapshot) {
+        let comments = document.querySelectorAll(".comment");
+        comments.forEach(comment => {
+            if (comment.innerHTML.includes(snapshot.val().text)) {
+                comment.remove();
+            }
+        });
+    });
 </script>
 
 
@@ -261,6 +303,9 @@ By : Ibrahim Mohamed
 
         
 
+
+
+        
 
         
         
