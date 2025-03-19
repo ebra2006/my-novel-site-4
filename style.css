@@ -358,42 +358,43 @@ a:hover {
     gap: 10px;
 }
 
+/* تنسيق الأزرار */
 .nav-button {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #00b3cc; /* أزرق نيون أخف */
-    color: #fff; /* لون الخط أبيض */
+    background: none; /* إزالة الخلفية */
+    color: #00e1ff; /* لون الخط سماوي نيون */
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 18px; /* تكبير الخط */
-    transition: background-color 0.3s, transform 0.2s;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
     min-width: 120px;
     text-align: center;
-    border: 2px solid #00e1ff; /* تحديد خفيف للأزرار */
-
-    /* إضافة تحديد أسود لحواف النص */
-    text-shadow: -1px -1px 2px black,  
-                 1px -1px 2px black,  
-                 -1px 1px 2px black,  
-                 1px 1px 2px black;
+    border: 2px solid #00e1ff; /* تحديد سماوي نيون */
+    
+    /* إضافة تأثير توهج خفيف */
+    box-shadow: 0 0 5px rgba(0, 225, 255, 0.5);
 }
 
+/* تأثير عند تمرير الماوس */
 .nav-button:hover,
 .nav-button:focus {
-    background-color: #6a00ff; /* يتحول للبنفسجي عند مرور الماوس */
+    background: #00e1ff;
+    color: black;
     transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 225, 255, 0.8);
 }
 
+/* تأثير عند الضغط */
 .nav-button:active {
-    background-color: #5200cc; /* لون بنفسجي داكن عند الضغط */
+    background: #0088aa;
     transform: scale(0.98);
 }
 
+/* جعل زر "أضف تعليقًا" بنفس التنسيق */
 .main-button {
     display: block;
     width: 100%;
     max-width: 260px;
 }
-
-
