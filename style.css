@@ -18,7 +18,7 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 18px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 nav a:hover {
@@ -32,6 +32,8 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* ضبط محتوى الصفحة */
@@ -49,7 +51,8 @@ nav a:hover {
     margin: 10px auto;
     width: 100%;
     border-left: 5px solid #0ff;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
 .chapter:hover {
@@ -69,7 +72,8 @@ button, .btn {
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
 button:hover, .btn:hover {
@@ -96,12 +100,12 @@ button:hover, .btn:hover {
 
 /* الروابط العامة */
 a {
-    color: #00ffff !important; /* أزرق نيون */
+    color: #00ffff !important;
     text-decoration: none;
 }
 
 a:hover {
-    color: #00b3b3 !important; /* لون أغمق عند التمرير */
+    color: #00b3b3 !important;
 }
 
 /* أزرار التواصل الاجتماعي */
@@ -120,22 +124,20 @@ a:hover {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s ease-in-out;
     border: 2px solid transparent;
+    transition: 0.3s ease-in-out;
 }
 
 .facebook {
-    color: #00f7ff; /* أزرق نيون */
+    color: #00f7ff;
     border-color: #00f7ff;
-    box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+    box-shadow: 0 0 10px #00f7ff;
 }
 
 .instagram {
-    color: #ff00ff; /* بنفسجي نيون */
+    color: #ff00ff;
     border-color: #ff00ff;
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
 }
 
 /* تأثير عند تمرير الماوس */
@@ -145,33 +147,18 @@ a:hover {
     transform: scale(1.1);
 }
 
-/* تأثير متحرك يضيء الأزرار */
-@keyframes neonGlow {
-    0% { box-shadow: 0 0 5px #fff; }
-    50% { box-shadow: 0 0 15px #fff, 0 0 25px #fff; }
-    100% { box-shadow: 0 0 5px #fff; }
-}
-
-.social-btn {
-    animation: neonGlow 1.5s infinite alternate;
-}
-
-.social-btn:hover {
-    opacity: 0.8;
-}
-
 /* تأثير الكتابة على العنوان */
 #typing-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #00ffea; /* لون مستقبلي */
-    font-family: 'Courier New', monospace; /* خط شبيه بالشاشات الرقمية */
+    color: #00ffea;
+    font-family: 'Courier New', monospace;
     text-align: center;
     margin-top: 20px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #00ffea; /* محاكاة مؤشر الكتابة */
-    animation: blink 0.8s infinite;
+    border-right: 3px solid #00ffea;
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
@@ -180,39 +167,36 @@ a:hover {
 
 /* العنوان الرئيسي */
 #neon-title {
-    font-family: 'Orbitron', sans-serif; /* خط مستقبلي */
+    font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
-    color: #0ff; /* لون نيون */
+    color: #0ff;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 3px #0ff, 0 0 6px #00f; /* تقليل التوهج */
+    text-shadow: 0 0 3px #0ff, 0 0 6px #00f;
     animation: neonGlow 1.5s ease-in-out infinite alternate;
 }
 
 /* تأثير وميض التوهج */
 @keyframes neonGlow {
-    0% {
-        text-shadow: 0 0 2px #0ff, 0 0 4px #00f;
-    }
-    100% {
-        text-shadow: 0 0 5px #0ff, 0 0 8px #00f;
-    }
+    0% { text-shadow: 0 0 2px #0ff, 0 0 4px #00f; }
+    100% { text-shadow: 0 0 5px #0ff, 0 0 8px #00f; }
 }
+
 /* صورة الروبوت */
 .robot-image {
     display: block;
-    width: 100%; /* جعل الصورة تمتد بعرض الشاشة */
-    max-width: 600px; /* تحديد أقصى عرض لها على الشاشات الكبيرة */
-    height: auto; /* الحفاظ على تناسب الأبعاد */
-    margin: 0 auto; /* توسيط الصورة */
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
     object-fit: cover;
 }
 
 /* تحسين الصورة على الهواتف */
 @media (max-width: 768px) {
     .robot-image {
-        max-width: 90%; /* جعلها أصغر قليلًا على الهواتف */
+        max-width: 90%;
     }
 }
 
@@ -220,7 +204,6 @@ a:hover {
 @media (min-width: 1024px) {
     .container {
         max-width: 80%;
-        margin: auto;
     }
 }
 
@@ -229,21 +212,11 @@ a:hover {
     .container {
         max-width: 90%;
     }
-    .robot-image {
-        width: 120px;
-    }
 }
-
 /* تحسين التناسب مع الشاشات الصغيرة (موبايل) */
 @media (max-width: 768px) {
     .container {
         max-width: 95%;
-    }
-    .robot-image {
-        width: 100px;
-    }
-    h2 {
-        font-size: 1.2rem;
     }
 }
 
@@ -266,8 +239,8 @@ a:hover {
 .nav-button {
     display: inline-block;
     padding: 12px 20px;
-    background: none; /* إزالة الخلفية */
-    color: #00e1ff; /* لون الخط سماوي نيون */
+    background: none;
+    color: #00e1ff;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -275,57 +248,46 @@ a:hover {
     transition: all 0.3s ease-in-out;
     min-width: 120px;
     text-align: center;
-    border: 2px solid #00e1ff; /* تحديد سماوي نيون */
-    
-    /* إضافة تأثير توهج خفيف */
+    border: 2px solid #00e1ff;
     box-shadow: 0 0 5px rgba(0, 225, 255, 0.5);
 }
 
-/* تأثير عند تمرير الماوس */
-.nav-button:hover,
-.nav-button:focus {
+.nav-button:hover {
     background: #00e1ff;
     color: black;
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0, 225, 255, 0.8);
 }
 
-/* تأثير عند الضغط */
 .nav-button:active {
     background: #0088aa;
     transform: scale(0.98);
 }
 
-/* جعل زر "أضف تعليقًا" بنفس التنسيق */
-.main-button {
-    display: block;
-    width: 100%;
-    max-width: 260px;
 
 
 
 
-
-
-
-
-
-    .watpad-button {
+/* زر واتباد */
+.watpad-button {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background: linear-gradient(90deg, #8a2be2, #00ffff);
-    border: none;
-    border-radius: 5px;
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 8px;
     text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid #ff4500;
+    color: #ff4500;
+    box-shadow: 0 0 10px #ff4500;
     transition: 0.3s ease-in-out;
-    box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
 }
 
 .watpad-button:hover {
+    background-color: #ff4500;
+    color: black;
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
+    box-shadow: 0 0 20px #ff4500;
 }
-    
-    
