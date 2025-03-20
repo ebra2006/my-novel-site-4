@@ -550,23 +550,31 @@ footer {
 
 
 
-
-.section-title {
-      color: #00fff7; /* لون نيون سماوي */
-    font-size: 18px;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    background: rgba(0, 255, 255, 0.1); /* خلفية خفيفة شفافة */
-    border: 2px solid rgba(0, 255, 255, 0.5); /* حدود متوهجة */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* هالة حول كل رابط */
-    display: inline-block;
-    margin: 10px 5px;
+.chapter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* مسافة بين الأزرار */
+    margin-top: 10px;
 }
 
-.chapter-links a:hover {
+.chapter-button {
+    color: #00fff7; /* لون النص */
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 255, 255, 0.1); /* خلفية شفافة */
+    border: 2px solid rgba(0, 255, 255, 0.5); /* حدود متوهجة */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* هالة */
+    display: block; /* يجعل الروابط تأخذ سطر كامل */
+    width: fit-content; /* يحدد الحجم بناءً على النص */
+    margin: auto; /* يجعلها في المنتصف */
+}
+
+.chapter-button:hover {
     background: rgba(0, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 1); /* تكبير الهالة عند التمرير */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 1); /* تأثير عند التمرير */
     transform: scale(1.05);
 }
