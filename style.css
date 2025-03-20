@@ -291,3 +291,47 @@ a:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px #8a2be2;
 }
+
+
+
+
+
+
+
+
+
+
+/* خلفية متحركة بنجوم */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d1b2a;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@keyframes move-stars {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-1000px); }
+}
+
+.stars {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow: 0 0 5px white;
+    border-radius: 50%;
+    animation: move-stars 10s linear infinite;
+}
+
+.stars:nth-child(odd) {
+    animation-duration: 12s;
+}
+
+.stars:nth-child(even) {
+    animation-duration: 8s;
+}
