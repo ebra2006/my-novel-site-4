@@ -550,45 +550,41 @@ footer {
 
 
 
-   .chapter-list a {
-    display: block;
-    background-color: #4e008e; /* لون بنفسجي نيون */
-    color: #fff; /* لون الخط أبيض */
-    padding: 12px;
-    margin: 8px 0;
+
+.section-title {
+    font-size: 24px;
+    color: #00fff7; /* لون نيون سماوي */
     text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00fff7;
+}
+
+.chapter-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.chapter-links a {
+    color: #ff00ff; /* بنفسجي نيون */
+    font-size: 20px;
     text-decoration: none;
-    font-size: 18px;
+    padding: 10px 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px #9400d3;
     transition: all 0.3s ease-in-out;
+    background: rgba(255, 0, 255, 0.1); /* لون خفيف مناسب للخلفية */
+    border: 1px solid #ff00ff;
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
 }
 
-.chapter-list a:hover {
-    background-color: #6a00c9; /* لون أفتح عند المرور */
-    box-shadow: 0 0 15px #ff00ff;
-    transform: scale(1.05); /* تكبير بسيط عند المرور */
+.chapter-links a:hover {
+    background: rgba(255, 0, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+    transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes glow {
-    0% { box-shadow: 0 0 10px #ff00ff; }
-    50% { box-shadow: 0 0 20px #ff00ff; }
-    100% { box-shadow: 0 0 10px #ff00ff; }
-}
-
 .chapter-list a {
     animation: glow 1.5s infinite alternate;
 }
