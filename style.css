@@ -462,15 +462,34 @@ body {
 
 
 
-
-
-
-
-
-
-
-
 section {
     margin-bottom: 5px; /* زيادة المسافة بين الأقسام */
     padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+button, .download-btn, .chapter-link {
+    background-color: #00ffea;
+    color: black;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 234, 0.7); /* توهج دائم */
+}
+
+button:hover, .download-btn:hover, .chapter-link:hover {
+    background-color: #009688;
+    box-shadow: 0 0 15px rgba(0, 255, 234, 1); /* توهج أقوى عند تمرير الماوس */
 }
