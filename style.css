@@ -469,14 +469,6 @@ section {
 
 
 
-
-
-
-
-
-
-
-
 .robot-image {
     width: 100%; /* جعل الصورة بنفس حجمها الأصلي */
     max-width: 500px; /* تحديد الحد الأقصى للحجم */
@@ -495,3 +487,29 @@ footer {
     font-size: 18px;
     box-shadow: 0 -5px 20px rgba(0, 255, 234, 0.5); /* تأثير إضاءة من الأعلى */
 }
+
+
+
+
+
+
+
+
+
+
+
+.chapter-content {
+    line-height: 1.8; /* تعديل المسافة بين السطور */
+    letter-spacing: 0.5px; /* تعديل المسافة بين الحروف */
+    text-align: justify; /* ضبط النص لمحاذاة جيدة */
+    margin-bottom: 20px; /* مسافة بين الفقرات */
+}
+.chapter-content p {
+    margin-bottom: 15px; /* المسافة بين الفقرات */
+}
+.chapter-container {
+    max-width: 800px; /* يحدد عرض النص */
+    margin: auto; /* يجعل النص في المنتصف */
+    padding: 20px; /* إضافة مسافة داخلية */
+}
+
