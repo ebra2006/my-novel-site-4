@@ -436,3 +436,19 @@ body {
     transform: scale(1.1); /* تكبير الصورة عند تمرير الماوس */
     filter: drop-shadow(0 0 15px #00ffea); /* تأثير توهج */
 }
+
+
+
+
+
+
+
+
+
+main {
+    max-width: 1000px; /* تحديد عرض المحتوى */
+    margin: auto; /* جعله في المنتصف */
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
