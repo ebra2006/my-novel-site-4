@@ -535,21 +535,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .chapter-button {
     display: flex;
     align-items: center;
@@ -602,4 +587,60 @@ footer {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تنسيق العنوان */
+h3 {
+    color: #00bfff; /* أزرق نيون */
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+}
+
+/* تنسيق القائمة */
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+/* تنسيق الأزرار */
+ul li {
+    margin: 15px 0;
+}
+
+ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #00bfff; /* لون الخط */
+    padding: 12px 25px;
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.8);
+}
+
+/* تأثير التوهج عند التمرير */
+ul li a:hover {
+    background: #00bfff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 1);
 }
