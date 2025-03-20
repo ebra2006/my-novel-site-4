@@ -379,3 +379,21 @@ canvas#stars {
     z-index: -1;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif; /* خط مستقبلي */
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; /* تأثير التوهج */
+    color: white; /* لون النص */
+}
