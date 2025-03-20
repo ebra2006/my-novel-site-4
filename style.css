@@ -548,37 +548,47 @@ footer {
 
 
 
-.chapter-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-}
 
-.chapter-button {
+
+   .chapter-list a {
     display: block;
-    width: 90%;
-    max-width: 400px;
-    padding: 12px 20px;
-    background: linear-gradient(45deg, #00b3cc, #6a00ff); /* تدرج ألوان */
-    color: white;
+    background-color: #4e008e; /* لون بنفسجي نيون */
+    color: #fff; /* لون الخط أبيض */
+    padding: 12px;
+    margin: 8px 0;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid #00e1ff;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    transition: transform 0.2s, box-shadow 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #9400d3;
+    transition: all 0.3s ease-in-out;
 }
 
-.chapter-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(106, 0, 255, 0.7);
+.chapter-list a:hover {
+    background-color: #6a00c9; /* لون أفتح عند المرور */
+    box-shadow: 0 0 15px #ff00ff;
+    transform: scale(1.05); /* تكبير بسيط عند المرور */
 }
 
-.chapter-button:active {
-    transform: scale(0.95);
-    background: #5200cc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #ff00ff; }
+    50% { box-shadow: 0 0 20px #ff00ff; }
+    100% { box-shadow: 0 0 10px #ff00ff; }
+}
+
+.chapter-list a {
+    animation: glow 1.5s infinite alternate;
 }
