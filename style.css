@@ -301,3 +301,31 @@ a:hover {
     display: block;
     width: 100%;
     max-width: 260px;
+
+
+
+
+
+
+
+
+
+    .watpad-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #8a2be2, #00ffff);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}
+
+.watpad-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
+}
+    
+    
