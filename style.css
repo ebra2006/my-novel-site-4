@@ -424,9 +424,6 @@ body {
 
 
 
-
-
-
 .robot-image {
     transition: transform 0.3s, filter 0.3s;
 }
@@ -440,13 +437,31 @@ body {
 
 
 
-
-
-
 main {
     max-width: 1000px; /* تحديد عرض المحتوى */
     margin: auto; /* جعله في المنتصف */
     padding: 20px;
     color: white;
     text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    color: #ffffff; /* جعل النصوص أكثر وضوحًا */
+    font-size: 18px; /* تكبير النصوص الافتراضية */
+}
+
+.about-author {
+    font-size: 20px; /* تكبير نص تعريف الكاتب */
+    line-height: 1.6; /* تحسين المسافات بين الأسطر */
 }
