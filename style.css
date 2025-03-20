@@ -449,13 +449,6 @@ main {
 
 
 
-
-
-
-
-
-
-
 body {
     color: #ffffff; /* جعل النصوص أكثر وضوحًا */
     font-size: 18px; /* تكبير النصوص الافتراضية */
@@ -464,4 +457,20 @@ body {
 .about-author {
     font-size: 20px; /* تكبير نص تعريف الكاتب */
     line-height: 1.6; /* تحسين المسافات بين الأسطر */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+    margin-bottom: 50px; /* زيادة المسافة بين الأقسام */
+    padding: 20px;
 }
