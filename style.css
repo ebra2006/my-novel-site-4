@@ -553,28 +553,28 @@ footer {
 .chapter-container {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* مسافة بين الأزرار */
-    margin-top: 10px;
+    gap: 10px; /* تقليل المسافة بين الأزرار */
 }
 
 .chapter-button {
-    color: #00fff7; /* لون النص */
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: start; /* جعل النص يبدأ بعد الأيقونة مباشرة */
+    background: rgba(0, 255, 255, 0.2);
+    border: 1px solid rgba(0, 255, 255, 0.5);
+    padding: 10px 15px; /* تقليل المسافة الفارغة داخل الزر */
+    border-radius: 8px;
+    font-size: 16px;
     text-decoration: none;
-    text-align: center;
-    padding: 12px 20px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
-    background: rgba(0, 255, 255, 0.1); /* خلفية شفافة */
-    border: 2px solid rgba(0, 255, 255, 0.5); /* حدود متوهجة */
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* هالة */
-    display: block; /* يجعل الروابط تأخذ سطر كامل */
-    width: fit-content; /* يحدد الحجم بناءً على النص */
-    margin: auto; /* يجعلها في المنتصف */
+    color: white;
+    transition: 0.3s;
 }
 
 .chapter-button:hover {
-    background: rgba(0, 255, 255, 0.2);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 1); /* تأثير عند التمرير */
-    transform: scale(1.05);
+    background: rgba(0, 255, 255, 0.4);
+}
+
+.eye-icon {
+    margin-right: 10px; /* المسافة بين رمز العين والنص */
+    font-size: 18px;
 }
