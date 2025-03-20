@@ -73,5 +73,38 @@
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="animated-background">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let bg = document.querySelector(".animated-background");
+            for (let i = 0; i < 100; i++) {
+                let star = document.createElement("div");
+                star.classList.add("stars");
+                star.style.top = Math.random() * window.innerHeight + "px";
+                star.style.left = Math.random() * window.innerWidth + "px";
+                bg.appendChild(star);
+            }
+        });
+    </script>
+</div>
+
+
+    
+
+
+    
+
+
+    
 </body>
 </html>
