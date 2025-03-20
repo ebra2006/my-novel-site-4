@@ -268,7 +268,7 @@ a:hover {
 
 
 
-/* زر واتباد */
+/* زر واتباد - متناسق مع ألوان الموقع */
 .watpad-button {
     display: inline-block;
     margin: 10px;
@@ -279,15 +279,15 @@ a:hover {
     font-weight: bold;
     letter-spacing: 1px;
     text-transform: uppercase;
-    border: 2px solid #ff4500;
-    color: #ff4500;
-    box-shadow: 0 0 10px #ff4500;
+    border: 2px solid #8a2be2; /* بنفسجي نيون */
+    color: #8a2be2;
+    box-shadow: 0 0 10px #8a2be2;
     transition: 0.3s ease-in-out;
 }
 
 .watpad-button:hover {
-    background-color: #ff4500;
-    color: black;
+    background-color: #8a2be2;
+    color: white;
     transform: scale(1.1);
-    box-shadow: 0 0 20px #ff4500;
+    box-shadow: 0 0 20px #8a2be2;
 }
