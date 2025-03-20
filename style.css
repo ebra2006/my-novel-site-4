@@ -428,7 +428,6 @@ body {
 
 
 .robot-image {
-    width: 250px; /* تحديد حجم الصورة */
     transition: transform 0.3s, filter 0.3s;
 }
 
@@ -436,7 +435,6 @@ body {
     transform: scale(1.1); /* تكبير الصورة عند تمرير الماوس */
     filter: drop-shadow(0 0 15px #00ffea); /* تأثير توهج */
 }
-
 
 
 
