@@ -397,3 +397,26 @@ h1, h2, h3 {
     text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea; /* تأثير التوهج */
     color: white; /* لون النص */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background: linear-gradient(45deg, #0d0d0d, #1a1a1a, #0d0d0d); /* تدرج لوني */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* حركة متكررة */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
