@@ -420,3 +420,19 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+
+
+
+
+
+
+.robot-image {
+    width: 250px; /* تحديد حجم الصورة */
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.robot-image:hover {
+    transform: scale(1.1); /* تكبير الصورة عند تمرير الماوس */
+    filter: drop-shadow(0 0 15px #00ffea); /* تأثير توهج */
+}
