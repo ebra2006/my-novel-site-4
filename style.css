@@ -550,31 +550,36 @@ footer {
 
 
 
-.chapter-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* تقليل المسافة بين الأزرار */
-}
-
+/* ضبط الأزرار ليكون لها نفس العرض */
 .chapter-button {
     display: flex;
     align-items: center;
-    justify-content: start; /* جعل النص يبدأ بعد الأيقونة مباشرة */
-    background: rgba(0, 255, 255, 0.2);
-    border: 1px solid rgba(0, 255, 255, 0.5);
-    padding: 10px 15px; /* تقليل المسافة الفارغة داخل الزر */
-    border-radius: 8px;
-    font-size: 16px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
+    justify-content: flex-start; /* جعل الأيقونة في بداية الزر */
+    width: 90%; /* توحيد العرض */
+    max-width: 400px; /* تجنب الامتداد الكبير */
+    margin: 10px auto; /* توسيط الزر */
+    padding: 12px 16px; /* تقليل الحشو الداخلي */
+    border-radius: 10px; /* جعل الحواف ناعمة */
+    background-color: rgba(0, 255, 255, 0.2); /* خلفية شفافة قليلاً */
+    border: 1px solid cyan; /* إضافة إطار */
+    transition: 0.3s; /* تأثير عند التمرير */
 }
 
+/* عند تمرير الماوس */
 .chapter-button:hover {
-    background: rgba(0, 255, 255, 0.4);
+    background-color: rgba(0, 255, 255, 0.4);
 }
 
-.eye-icon {
-    margin-right: 10px; /* المسافة بين رمز العين والنص */
-    font-size: 18px;
+/* ضبط أيقونة العين */
+.chapter-button img {
+    width: 22px; /* تصغير حجم الأيقونة */
+    height: 22px;
+    margin-right: 10px; /* تقليل المسافة بين الأيقونة والنص */
+}
+
+/* تنسيق النص داخل الزر */
+.chapter-button span {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
 }
