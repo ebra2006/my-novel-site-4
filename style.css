@@ -513,3 +513,34 @@ footer {
     padding: 20px; /* إضافة مسافة داخلية */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تحسين عرض الصفحة الرئيسية */
+.container {
+    max-width: 90%; /* جعلها تشغل 90% من الشاشة */
+    margin: 0 auto; /* توسيط المحتوى */
+}
+
+/* تحسين تنسيق النص داخل الفصول */
+.chapter-content {
+    font-size: 18px;
+    line-height: 1.8; /* زيادة التباعد بين الأسطر */
+    text-align: justify; /* محاذاة النص */
+    padding: 20px; /* إضافة تباعد داخلي */
+}
+
+/* إضافة تباعد بين الفقرات */
+.chapter-content p {
+    margin-bottom: 15px;
+}
