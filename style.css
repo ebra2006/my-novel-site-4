@@ -550,36 +550,56 @@ footer {
 
 
 
-/* ضبط الأزرار ليكون لها نفس العرض */
 .chapter-button {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* جعل الأيقونة في بداية الزر */
-    width: 90%; /* توحيد العرض */
-    max-width: 400px; /* تجنب الامتداد الكبير */
-    margin: 10px auto; /* توسيط الزر */
-    padding: 12px 16px; /* تقليل الحشو الداخلي */
-    border-radius: 10px; /* جعل الحواف ناعمة */
-    background-color: rgba(0, 255, 255, 0.2); /* خلفية شفافة قليلاً */
-    border: 1px solid cyan; /* إضافة إطار */
-    transition: 0.3s; /* تأثير عند التمرير */
+    justify-content: center;
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid cyan; /* إطار أزرق نيون */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* التوهج النيون */
+.chapter-button::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    border-radius: 12px;
+    box-shadow: 0 0 8px cyan, 0 0 16px cyan;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
 }
 
 /* عند تمرير الماوس */
 .chapter-button:hover {
-    background-color: rgba(0, 255, 255, 0.4);
+    background: rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 12px cyan;
 }
 
-/* ضبط أيقونة العين */
+/* عند النقر */
+.chapter-button:active {
+    transform: scale(0.98);
+}
+
+/* أيقونة العين */
 .chapter-button img {
-    width: 22px; /* تصغير حجم الأيقونة */
-    height: 22px;
-    margin-right: 10px; /* تقليل المسافة بين الأيقونة والنص */
-}
-
-/* تنسيق النص داخل الزر */
-.chapter-button span {
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
