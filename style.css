@@ -1079,3 +1079,33 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #00ffff;
+    font-size: 16px;
+}
+
+.download-btn {
+    background-color: #0f172a;
+    color: #00ffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #1e293b;
+}
