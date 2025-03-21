@@ -855,45 +855,47 @@ ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
     transition: 0.3s ease-in-out;
 }
 
-/* واتساب */
-.share-buttons .whatsapp {
-    background-color: rgba(0, 255, 0, 0.2);
-    border: 2px solid #00ff00;
+/* فيسبوك */
+.share-buttons a:nth-child(1) {
+    background-color: rgba(0, 102, 255, 0.2);
+    border: 2px solid #0066ff;
+    color: #0066ff;
 }
 
-.share-buttons .whatsapp:hover {
-    background-color: #00ff00;
+.share-buttons a:nth-child(1):hover {
+    background-color: #0066ff;
+    color: #ffffff;
 }
 
 /* تويتر (X) */
-.share-buttons .twitter {
+.share-buttons a:nth-child(2) {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #ffffff;
+    color: #ffffff;
 }
 
-.share-buttons .twitter:hover {
+.share-buttons a:nth-child(2):hover {
     background-color: #ffffff;
+    color: #000000;
 }
 
-/* فيسبوك */
-.share-buttons .facebook {
-    background-color: rgba(0, 102, 255, 0.2);
-    border: 2px solid #0066ff;
+/* واتساب */
+.share-buttons a:nth-child(3) {
+    background-color: rgba(0, 255, 0, 0.2);
+    border: 2px solid #00ff00;
+    color: #00ff00;
 }
 
-.share-buttons .facebook:hover {
-    background-color: #0066ff;
-}
-
-/* أيقونات داخل الأزرار */
-.share-buttons img {
-    width: 20px;
-    height: 20px;
+.share-buttons a:nth-child(3):hover {
+    background-color: #00ff00;
+    color: #000000;
 }
