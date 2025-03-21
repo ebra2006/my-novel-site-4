@@ -1035,17 +1035,17 @@ p {
   font-size: 18px;
   font-weight: bold;
   background: rgba(0, 0, 0, 0); /* خلفية شفافة بالكامل */
-  color: #00ffcc;
+  color: #bb00ff; /* لون النص بنفسجي نيون */
   text-decoration: none;
-  border: 2px solid #00ffcc;
+  border: 2px solid #bb00ff; /* حدود بنفسجية */
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.7); /* تأثير نيون خفيف */
+  box-shadow: 0 0 15px rgba(187, 0, 255, 0.7); /* تأثير نيون بنفسجي خفيف */
   transition: 0.3s ease-in-out;
 }
 
 .wattpad-button:hover {
-  background: rgba(0, 255, 204, 0.1); /* خلفية شبه شفافة عند التحويم */
-  color: #00ffcc;
-  box-shadow: 0 0 25px rgba(0, 255, 204, 1); /* تأثير نيون أقوى */
+  background: rgba(187, 0, 255, 0.1); /* خلفية شبه شفافة عند التحويم */
+  color: #bb00ff;
+  box-shadow: 0 0 25px rgba(187, 0, 255, 1); /* تأثير نيون أقوى */
   transform: scale(1.05);
 }
