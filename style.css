@@ -767,3 +767,53 @@ ul li a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* حاوية زر المشاركة */
+.share-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* نص "شارك الفصل" */
+.share-container span {
+    display: block;
+    color: #00ffff; /* لون نيون */
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* تصميم الأزرار */
+.share-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+    border: 1.5px solid #00ffff; /* إطار نيون */
+}
+
+/* ألوان المنصات */
+.facebook { background-color: rgba(24, 119, 242, 0.2); }
+.twitter { background-color: rgba(29, 161, 242, 0.2); }
+.whatsapp { background-color: rgba(37, 211, 102, 0.2); }
+
+/* تأثير التوهج عند التمرير */
+.share-btn:hover {
+    box-shadow: 0 0 15px #00ffff;
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
