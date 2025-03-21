@@ -1019,7 +1019,17 @@ body {
 
 
 p {
-    line-height: 1.8 !important;  /* تحسين التباعد بين الأسطر */
-    margin-bottom: 30px !important;  /* زيادة المسافة بين الفقرات */
-    text-align: justify !important;  /* ضبط النص بشكل متناسق */
+    line-height: 1.8 !important; /* ضبط المسافة بين الأسطر */
+    margin-bottom: 20px !important; /* المسافة بين الفقرات */
+    text-align: justify !important; /* ضبط النص من الجانبين */
+    text-indent: 20px !important; /* إدخال السطر الأول من كل فقرة */
 }
+p:nth-child(odd) {
+    line-height: 1.6 !important;
+}
+
+p:nth-child(even) {
+    line-height: 1.9 !important;
+}
+p:nth-of-type(3n) {
+    max-width: 85% !important; /* يقلل عرض بعض الفقرات */
