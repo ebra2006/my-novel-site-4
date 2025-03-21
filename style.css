@@ -1079,18 +1079,23 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-.download-btn {
-    display: block; /* يجعل الرابط يأخذ عرض العنصر */
-    padding: 10px;
+.download-container {
     text-align: center;
-    background-color: #00bcd4; /* لون الزر */
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #00bcd4;
     color: white;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin: 10px 0;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 .download-btn:hover {
-    background-color: #008c9e; /* لون عند التمرير */
+    background-color: #008c9e;
 }
