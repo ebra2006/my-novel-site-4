@@ -648,8 +648,6 @@ ul li a:hover {
 
 
 
-
-
 .about-title {
       font-size: 24px;
     font-weight: bold;
@@ -658,4 +656,98 @@ ul li a:hover {
     text-transform: uppercase;
     text-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
     margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* إخفاء checkbox */
+.toggle-checkbox {
+    display: none;
+}
+
+/* زر فتح القائمة */
+.open-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* تصميم القائمة الجانبية */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* مخفية خارج الشاشة */
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    color: white;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+}
+
+/* زر الإغلاق */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* إظهار القائمة عند التفعيل */
+.toggle-checkbox:checked ~ .sidebar {
+    right: 0;
+}
+
+/* إخفاء زر الفتح عند فتح القائمة */
+.toggle-checkbox:checked ~ .open-btn {
+    display: none;
+}
+
+/* تنسيق الفصول */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: right;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
 }
