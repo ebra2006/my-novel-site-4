@@ -986,3 +986,15 @@ p {
     max-width: 800px;
     margin: auto;
 }
+
+
+
+
+
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+    font-size: 18px; /* حجم الخط الأساسي */
+    color: #fff; /* لون النص */
+}
