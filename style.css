@@ -1056,3 +1056,23 @@ p {
   margin-bottom: 1.5em;
   line-height: 1.6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+p {
+  white-space: pre-line !important; /* يحافظ على فواصل الأسطر */
+  line-height: 1.6 !important; /* تباعد بين الأسطر */
+  margin-bottom: 15px !important; /* تباعد بين الفقرات */
+}
