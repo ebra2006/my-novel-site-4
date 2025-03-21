@@ -110,26 +110,34 @@
 
 
 
-
     
 
-    document.addEventListener("DOMContentLoaded", function() {
-        document.querySelectorAll('input[name="font"]').forEach((radio) => {
-            radio.addEventListener('change', function() {
+  document.addEventListener("DOMContentLoaded", function() {
+        const fontRadios = document.querySelectorAll('input[name="font"]');
+        const savedFont = localStorage.getItem("selectedFont");
+
+        if (savedFont) {
+            document.body.style.fontFamily = '${savedFont}', sans-serif;
+            fontRadios.forEach((radio) => {
+                if (radio.value === savedFont) radio.checked = true;
+            });
+        }
+
+        fontRadios.forEach((radio) => {
+            radio.addEventListener("change", function() {
                 document.body.style.fontFamily = '${this.value}', sans-serif;
+                localStorage.setItem("selectedFont", this.value);
             });
         });
     });
-
-
-
-
-
-
-
-
-
     
+
+
+
+
+
+
+
 
 
     
