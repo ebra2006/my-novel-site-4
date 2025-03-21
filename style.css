@@ -1099,3 +1099,33 @@ p, h1, h2, h3, h4, h5, h6 {
 .download-btn:hover {
     background-color: #008c9e;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* نصوص عربية */
+.arabic-content {
+    direction: rtl;
+    unicode-bidi: embed; 
+    text-align: right; 
+}
+
+/* نصوص إنجليزية */
+.english-content {
+    direction: ltr; 
+    unicode-bidi: embed; 
+    text-align: left;
+}
