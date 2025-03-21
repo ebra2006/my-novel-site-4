@@ -954,9 +954,6 @@ ul li a:hover {
 
 
 
-
-
-
 select {
     display: none !important;
 }
@@ -980,3 +977,8 @@ transform: scale(1.04);
 
 
 
+p {
+    line-height: 1.8; /* يضيف مسافة بين السطور */
+    margin-bottom: 15px; /* يضيف مسافة بين الفقرات */
+    text-align: justify; /* يجعل النص متساوي الحواف */
+}
