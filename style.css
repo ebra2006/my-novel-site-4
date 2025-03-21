@@ -993,8 +993,19 @@ p {
 
 
 
+p {
+    line-height: 1.8 !important;
+    margin-bottom: 15px !important;
+    text-align: justify !important;
+}
+
 body {
-    font-family: 'Cairo', sans-serif;
-    font-size: 18px; /* حجم الخط الأساسي */
-    color: #fff; /* لون النص */
+    font-family: 'Cairo', sans-serif !important;
+    font-size: 18px !important;
+    color: #fff !important;
+}
+
+.container {
+    max-width: 800px !important;
+    margin: auto !important;
 }
