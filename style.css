@@ -1049,17 +1049,21 @@ p {
 
 
 body {
-  text-align: center; /* يوسّط كل النصوص في الموقع */
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  text-align: center; /* يوسّط جميع العناوين والفقرات */
-}
-
-.welcome-text, .chapter-description {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.container, .content, .chapter-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
