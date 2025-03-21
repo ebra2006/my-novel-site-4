@@ -982,3 +982,7 @@ p {
     margin-bottom: 15px; /* يضيف مسافة بين الفقرات */
     text-align: justify; /* يجعل النص متساوي الحواف */
 }
+.container {
+    max-width: 800px;
+    margin: auto;
+}
