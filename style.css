@@ -1015,62 +1015,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-p {
-    line-height: 1.8 !important; /* تباعد بين الأسطر */
-    margin: 15px 0 !important; /* مسافة واضحة بين الفقرات */
-    text-align: justify !important; /* ضبط النص من الجانبين */
-    text-indent: 20px !important; /* إدخال السطر الأول */
-    display: block !important; /* يضمن أن الفقرة تأخذ مساحة منفصلة */
-}
-
-/* جعل بعض الفقرات بمسافات أكبر */
-p:nth-child(odd) {
-    margin-bottom: 25px !important;
-}
-
-p:nth-child(even) {
-    margin-bottom: 15px !important;
-}
-
-/* تقليل عرض بعض الفقرات لتجنب التكدس */
-p:nth-of-type(3n) {
-    max-width: 90% !important;
-}
-
-
-
-p {
-  margin-bottom: 1.5em;
-  line-height: 1.6;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 p {
   white-space: pre-line !important; /* يحافظ على فواصل الأسطر */
   line-height: 1.6 !important; /* تباعد بين الأسطر */
