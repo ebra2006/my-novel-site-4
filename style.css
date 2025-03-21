@@ -1079,33 +1079,17 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: #00ffff;
-    font-size: 16px;
-}
-
 .download-btn {
-    background-color: #0f172a;
-    color: #00ffff;
-    padding: 5px 10px;
+    display: block; /* يجعل الزر يأخذ سطر كامل */
+    padding: 10px;
+    text-align: center;
+    background-color: #00bcd4; /* لون الزر */
+    color: white;
     border-radius: 5px;
-    font-size: 14px;
-    transition: 0.3s;
+    text-decoration: none;
+    margin-top: 10px;
 }
 
 .download-btn:hover {
-    background-color: #1e293b;
+    background-color: #008c9e; /* لون عند التمرير */
 }
