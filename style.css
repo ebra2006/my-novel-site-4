@@ -1067,3 +1067,34 @@ body {
 p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
+
+
+
+
+
+
+
+
+
+/* جعل المحتوى يمتد على الشاشة بالكامل */
+body, html {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* تمديد الحاوية الرئيسية */
+.container, .content, .chapter-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
