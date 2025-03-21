@@ -911,57 +911,41 @@ ul li a:hover {
 
 
 
-.share-buttons {
-    display: flex;
-    justify-content: center; /* توسيط الأزرار */
-    gap: 10px; /* مسافة بين الأزرار */
+/* حاوية زر المشاركة */
+.share-container {
+    text-align: center;
+    margin-top: 20px;
     padding: 10px;
 }
 
-.share-buttons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+/* نص "شارك الفصل" */
+.share-container span {
+    display: block;
+    color: #00ffff; /* لون نيون */
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* تصميم الأزرار */
+.share-btn {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 22px;
-    transition: 0.3s ease-in-out;
+    font-size: 16px;
+    color: white;
+    transition: 0.3s;
+    border: 1.5px solid #00ffff; /* إطار نيون */
 }
 
-/* واتساب */
-.share-buttons .whatsapp {
-    background-color: rgba(0, 255, 0, 0.2);
-    border: 1px solid #00ff00;
-    color: #00ff00;
-}
+/* ألوان المنصات */
+.facebook { background-color: rgba(24, 119, 242, 0.2); }
+.twitter { background-color: rgba(29, 161, 242, 0.2); }
+.whatsapp { background-color: rgba(37, 211, 102, 0.2); }
 
-.share-buttons .whatsapp:hover {
-    background-color: #00ff00;
-    color: black;
-}
-
-/* تويتر (X) */
-.share-buttons .twitter {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid #ffffff;
-    color: #ffffff;
-}
-
-.share-buttons .twitter:hover {
-    background-color: #ffffff;
-    color: black;
-}
-
-/* فيسبوك */
-.share-buttons .facebook {
-    background-color: rgba(0, 102, 255, 0.2);
-    border: 1px solid #0066ff;
-    color: #0066ff;
-}
-
-.share-buttons .facebook:hover {
-    background-color: #0066ff;
-    color: black;
+/* تأثير التوهج عند التمرير */
+.share-btn:hover {
+    box-shadow: 0 0 15px #00ffff;
+    background-color: rgba(0, 255, 255, 0.3);
 }
