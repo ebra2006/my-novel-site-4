@@ -967,16 +967,6 @@ transform: scale(1.04);
 
 
 
-
-
-
-
-
-
-
-
-
-
 p {
     line-height: 1.8; /* يضيف مسافة بين السطور */
     margin-bottom: 15px; /* يضيف مسافة بين الفقرات */
@@ -989,9 +979,7 @@ p {
 
 
 
-
-
-
+/*الخط بتاع الموقع*/
 
 p {
     line-height: 1.8 !important;
@@ -1010,13 +998,24 @@ body {
     margin: auto !important;
 }
 
-
-
-
-
-
+/*ده اللي عمل فقرات في الرواية*/
 p {
   white-space: pre-line !important; /* يحافظ على فواصل الأسطر */
   line-height: 1.6 !important; /* تباعد بين الأسطر */
   margin-bottom: 15px !important; /* تباعد بين الفقرات */
+}
+
+
+/*ده يظبط زرار واتباد*/
+
+.wattpad-button-container {
+  display: flex !important;
+  justify-content: center !important; /* محاذاة أفقية في المنتصف */
+  align-items: center !important; /* محاذاة رأسية في المنتصف */
+}
+
+.wattpad-button {
+  text-align: center !important; /* توسيط النص داخل الزر */
+  padding: 10px 20px !important; /* تحسين المسافات الداخلية */
+  display: inline-block !important; /* تجنب تمدد الزر */
 }
