@@ -1020,6 +1020,6 @@ body {
 
 p {
     line-height: 1.8 !important;  /* تحسين التباعد بين الأسطر */
-    margin-bottom: 25px !important;  /* زيادة المسافة بين الفقرات */
+    margin-bottom: 30px !important;  /* زيادة المسافة بين الفقرات */
     text-align: justify !important;  /* ضبط النص بشكل متناسق */
 }
