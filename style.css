@@ -1080,14 +1080,15 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 .download-btn {
-    display: block; /* يجعل الزر يأخذ سطر كامل */
+    display: block; /* يجعل الرابط يأخذ عرض العنصر */
     padding: 10px;
     text-align: center;
     background-color: #00bcd4; /* لون الزر */
     color: white;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 10px;
+    font-weight: bold;
+    margin: 10px 0;
 }
 
 .download-btn:hover {
