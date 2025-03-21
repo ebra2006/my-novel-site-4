@@ -846,55 +846,54 @@ ul li a:hover {
 .share-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* المسافة بين الأزرار */
+    gap: 10px; /* تباعد بين الأزرار */
     padding: 10px;
+    flex-wrap: wrap; /* يسمح بانتقال الأزرار للسطر الثاني لو القائمة ضيقة */
 }
 
 .share-buttons a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px; /* زوايا مستديرة ولكن ليست دائرية بالكامل */
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
     text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
     transition: 0.3s ease-in-out;
 }
 
-/* زر واتساب */
+/* واتساب */
 .share-buttons .whatsapp {
-    background-color: rgba(0, 255, 0, 0.2); /* لون شفاف */
-    border: 2px solid #00ff00; /* إطار نيون */
-    color: #00ff00;
+    background-color: rgba(0, 255, 0, 0.2);
+    border: 2px solid #00ff00;
 }
 
 .share-buttons .whatsapp:hover {
     background-color: #00ff00;
-    color: black;
 }
 
-/* زر تويتر (X) */
+/* تويتر (X) */
 .share-buttons .twitter {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #ffffff;
-    color: #ffffff;
 }
 
 .share-buttons .twitter:hover {
     background-color: #ffffff;
-    color: black;
 }
 
-/* زر فيسبوك */
+/* فيسبوك */
 .share-buttons .facebook {
     background-color: rgba(0, 102, 255, 0.2);
     border: 2px solid #0066ff;
-    color: #0066ff;
 }
 
 .share-buttons .facebook:hover {
     background-color: #0066ff;
-    color: black;
+}
+
+/* أيقونات داخل الأزرار */
+.share-buttons img {
+    width: 20px;
+    height: 20px;
 }
