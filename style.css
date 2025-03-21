@@ -1012,10 +1012,11 @@ p {
   display: flex !important;
   justify-content: center !important; /* محاذاة أفقية في المنتصف */
   align-items: center !important; /* محاذاة رأسية في المنتصف */
+  width: 100% !important; /* التأكد من أن العنصر يمتد على عرض الصفحة */
 }
 
 .wattpad-button {
   text-align: center !important; /* توسيط النص داخل الزر */
   padding: 10px 20px !important; /* تحسين المسافات الداخلية */
-  display: inline-block !important; /* تجنب تمدد الزر */
+  display: block !important; /* جعل الزر عنصرًا بلوكيًا ليتمركز بشكل أفضل */
 }
