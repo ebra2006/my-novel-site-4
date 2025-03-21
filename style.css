@@ -1008,15 +1008,28 @@ p {
 
 /*ده يظبط زرار واتباد*/
 
+#wattpad-links {
+  text-align: center !important; /* توسيط المحتوى */
+}
+
 .wattpad-button-container {
   display: flex !important;
-  justify-content: center !important; /* محاذاة أفقية في المنتصف */
-  align-items: center !important; /* محاذاة رأسية في المنتصف */
-  width: 100% !important; /* التأكد من أن العنصر يمتد على عرض الصفحة */
+  justify-content: center !important; /* توسيط الزر */
 }
 
 .wattpad-button {
-  text-align: center !important; /* توسيط النص داخل الزر */
-  padding: 10px 20px !important; /* تحسين المسافات الداخلية */
-  display: block !important; /* جعل الزر عنصرًا بلوكيًا ليتمركز بشكل أفضل */
+  display: block !important;
+  padding: 12px 24px !important;
+  font-size: 18px !important;
+  background: #8a2be2 !important; /* لون بنفسجي نيون */
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 10px #8a2be2 !important;
+  transition: 0.3s ease-in-out !important;
+}
+
+.wattpad-button:hover {
+  box-shadow: 0 0 20px #8a2be2 !important;
+  transform: scale(1.05) !important;
 }
