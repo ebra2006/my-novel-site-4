@@ -1017,19 +1017,35 @@ p {
   justify-content: center !important; /* توسيط الزر */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .wattpad-button {
-  display: block !important;
-  padding: 12px 24px !important;
-  font-size: 18px !important;
-  background: #8a2be2 !important; /* لون بنفسجي نيون */
-  color: white !important;
-  text-decoration: none !important;
-  border-radius: 8px !important;
-  box-shadow: 0 0 10px #8a2be2 !important;
-  transition: 0.3s ease-in-out !important;
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0); /* خلفية شفافة بالكامل */
+  color: #00ffcc;
+  text-decoration: none;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.7); /* تأثير نيون خفيف */
+  transition: 0.3s ease-in-out;
 }
 
 .wattpad-button:hover {
-  box-shadow: 0 0 20px #8a2be2 !important;
-  transform: scale(1.05) !important;
+  background: rgba(0, 255, 204, 0.1); /* خلفية شبه شفافة عند التحويم */
+  color: #00ffcc;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 1); /* تأثير نيون أقوى */
+  transform: scale(1.05);
 }
