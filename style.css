@@ -899,3 +899,71 @@ ul li a:hover {
     background-color: #00ff00;
     color: #000000;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.share-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.share-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* الفيسبوك */
+.share-buttons a:nth-child(1) {
+    background-color: #0e1f56;
+    border: 2px solid #1877f2;
+    color: #1877f2;
+}
+
+.share-buttons a:nth-child(1):hover {
+    background-color: #1877f2;
+    color: white;
+}
+
+/* تويتر (X) */
+.share-buttons a:nth-child(2) {
+    background-color: #111;
+    border: 2px solid white;
+    color: white;
+}
+
+.share-buttons a:nth-child(2):hover {
+    background-color: white;
+    color: black;
+}
+
+/* واتساب */
+.share-buttons a:nth-child(3) {
+    background-color: #002b00;
+    border: 2px solid #25d366;
+    color: #25d366;
+}
+
+.share-buttons a:nth-child(3):hover {
+    background-color: #25d366;
+    color: black;
+}
