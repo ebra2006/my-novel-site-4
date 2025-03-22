@@ -1120,22 +1120,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-.chapter-button {
-    display: block;
-    padding: 12px;
-    background-color: rgba(0, 255, 255, 0.2); /* لون الخلفية نفسه */
-    color: cyan; /* لون النص */
-    border: 2px solid cyan; /* حدود زرقاء */
-    border-radius: 10px; /* حواف دائرية */
-    text-decoration: none; /* إزالة الخط */
-    font-weight: bold; /* جعل النص عريض */
-    font-size: 18px; /* حجم النص */
-    text-align: center; /* توسيط النص */
-    margin: 10px auto; /* توسيط الزر في المنتصف */
-    width: 80%; /* عرض الزر */
-    transition: 0.3s ease-in-out; /* تأثير التحويل */
-}
 
-.chapter-button:hover {
     box-shadow: 0 0 15px cyan; /* توهج عند التحويل */
 }
