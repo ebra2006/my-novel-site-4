@@ -1116,28 +1116,27 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-/* لضبط النصوص العربية */
-.arabic-content {
-    direction: rtl !important; /* يجعل الاتجاه من اليمين لليسار */
-    unicode-bidi: embed !important; /* يحسن عرض النص المختلط */
-    text-align: right !important; /* محاذاة النص لليمين */
+
+
+
+
+.nav-button {
+    display: block;
+    padding: 12px;
+    background-color: rgba(0, 188, 212, 0.9);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+    transition: 0.3s ease-in-out;
+    border: 1px solid cyan; /* لجعل الحدود بنفس اللون */
 }
 
-/* لضبط النصوص الإنجليزية */
-.english-content {
-    direction: ltr !important; /* يجعل الاتجاه من اليسار لليمين */
-    unicode-bidi: embed !important; /* يحافظ على تنسيق النصوص */
-    text-align: left !important; /* محاذاة النص لليسار */
-}
-
-/* لضمان أن الأزرار تبقى LTR */
-.button-container {
-    direction: ltr !important; /* يجعل الأزرار تتجه من اليسار إلى اليمين */
-    text-align: left !important; /* محاذاة الأزرار لليسار */
-}
-
-/* لضبط النص تلقائياً بناءً على اللغة */
-.auto-direction {
-    direction: auto !important; /* يتغير الاتجاه تلقائيًا */
-    unicode-bidi: plaintext !important; /* يتعامل مع النص المختلط */
+.nav-button:hover {
+    background-color: rgba(0, 188, 212, 1);
+    box-shadow: 0 0 10px cyan; /* تأثير الوهج عند التحويل */
 }
