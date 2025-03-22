@@ -1120,23 +1120,22 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 
-.nav-button {
+.chapter-button {
     display: block;
     padding: 12px;
-    background-color: rgba(0, 188, 212, 0.9);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    margin: 10px auto;
-    width: 80%;
-    transition: 0.3s ease-in-out;
-    border: 1px solid cyan; /* لجعل الحدود بنفس اللون */
+    background-color: rgba(0, 255, 255, 0.2); /* لون الخلفية نفسه */
+    color: cyan; /* لون النص */
+    border: 2px solid cyan; /* حدود زرقاء */
+    border-radius: 10px; /* حواف دائرية */
+    text-decoration: none; /* إزالة الخط */
+    font-weight: bold; /* جعل النص عريض */
+    font-size: 18px; /* حجم النص */
+    text-align: center; /* توسيط النص */
+    margin: 10px auto; /* توسيط الزر في المنتصف */
+    width: 80%; /* عرض الزر */
+    transition: 0.3s ease-in-out; /* تأثير التحويل */
 }
 
-.nav-button:hover {
-    background-color: rgba(0, 188, 212, 1);
-    box-shadow: 0 0 10px cyan; /* تأثير الوهج عند التحويل */
+.chapter-button:hover {
+    box-shadow: 0 0 15px cyan; /* توهج عند التحويل */
 }
