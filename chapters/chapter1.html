@@ -286,26 +286,18 @@ By : Ibrahim Mohamed
 
 
 
+        
 
 
-
-
-
-
-
-<div id="comments-section">
-  <h2>التعليقات</h2>
-
+<section id="comments-section">
+  <h3>أضف تعليقك</h3>
   <form id="comment-form">
-    <input type="text" id="username" placeholder="اسمك" required />
-    <textarea id="message" placeholder="اكتب تعليقك" required></textarea>
-    <button type="submit">نشر التعليق</button>
+    <input type="text" id="username" placeholder="اسمك" required><br>
+    <textarea id="comment" placeholder="اكتب تعليقك هنا" required></textarea><br>
+    <button type="submit">إرسال</button>
   </form>
-
-  <div id="comments-list"></div>
-</div>
-
-
+  <div id="comments-container"></div>
+</section>
 
 
 
@@ -315,63 +307,66 @@ By : Ibrahim Mohamed
 
         
 
+
+
+
+
 <script type="module">
-  import { db } from './firebase-config.js';
-  import {
-    collection,
-    addDoc,
-    getDocs,
-    query,
-    orderBy,
-    Timestamp
-  } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+  // استيراد إعدادات Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+  import { firebaseConfig } from "../firebase-config.js"; // غير المسار حسب مكان ملفك
 
-  const form = document.getElementById("comment-form");
-  const commentsList = document.getElementById("comments-list");
+  // تهيئة Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
-  // إرسال تعليق جديد
-  form.addEventListener("submit", async (e) => {
+  const commentForm = document.getElementById("comment-form");
+  const commentsContainer = document.getElementById("comments-container");
+
+  // إضافة تعليق
+  commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const username = document.getElementById("username").value;
-    const message = document.getElementById("message").value;
+    const comment = document.getElementById("comment").value;
 
-    if (!username || !message) return;
-
-    await addDoc(collection(db, "comments"), {
-      username,
-      message,
-      timestamp: Timestamp.now()
-    });
-
-    form.reset();
-    loadComments(); // إعادة تحميل التعليقات بعد الإضافة
+    try {
+      await addDoc(collection(db, "comments"), {
+        username,
+        comment,
+        createdAt: new Date()
+      });
+      commentForm.reset();
+      loadComments(); // إعادة تحميل التعليقات بعد الإضافة
+    } catch (error) {
+      console.error("خطأ أثناء إضافة التعليق: ", error);
+    }
   });
 
-  // تحميل التعليقات من Firebase
+  // قراءة التعليقات
   async function loadComments() {
-    commentsList.innerHTML = "";
-    const q = query(collection(db, "comments"), orderBy("timestamp", "desc"));
+    commentsContainer.innerHTML = "";
+    const q = query(collection(db, "comments"), orderBy("createdAt", "desc"));
     const querySnapshot = await getDocs(q);
-
     querySnapshot.forEach((doc) => {
       const data = doc.data();
-      const comment = document.createElement("div");
-      comment.innerHTML = <strong>${data.username}</strong>: ${data.message};
-      commentsList.appendChild(comment);
+      const commentElement = document.createElement("div");
+      commentElement.innerHTML = <strong>${data.username}:</strong> ${data.comment};
+      commentsContainer.appendChild(commentElement);
     });
   }
 
   // تحميل التعليقات عند فتح الصفحة
   loadComments();
 </script>
-        
 
 
 
-<script type="module" src="./firebase-config.js"></script>
 
-        
+
+
+
+
 
         
         
