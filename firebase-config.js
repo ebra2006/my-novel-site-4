@@ -1,21 +1,21 @@
-// استيراد مكتبات Firebase المطلوبة
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// تعريف المتغيرات البيئية
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyDVgX5siwAvifImpq4_u7T2-s3Wv0oso3g",
+  authDomain: "veronnovel-fd5c8.firebaseapp.com",
+  projectId: "veronnovel-fd5c8",
+  storageBucket: "veronnovel-fd5c8.firebasestorage.app",
+  messagingSenderId: "581899832569",
+  appId: "1:581899832569:web:423e84bb20e1aa54856628",
+  measurementId: "G-PK4WPW2LVB"
 };
 
-// تهيئة Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-// تصدير القيم لاستخدامها في الملفات الأخرى
-export { db, collection, addDoc, serverTimestamp };
+const analytics = getAnalytics(app);
