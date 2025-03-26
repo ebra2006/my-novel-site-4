@@ -137,6 +137,80 @@
 
 
 
+
+
+
+<section id="comments-section">
+  <h3>أضف تعليقك</h3>
+  <form id="comment-form">
+    <input type="text" id="username" placeholder="اسمك" required><br>
+    <textarea id="comment" placeholder="اكتب تعليقك هنا" required></textarea><br>
+    <button type="submit">إرسال</button>
+  </form>
+  <div id="comments-container"></div>
+</section>
+
+<script type="module">
+  // استيراد إعدادات Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+  import { firebaseConfig } from "../firebase-config.js"; // تأكد المسار صحيح حسب موقع ملفك
+
+  // تهيئة Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  const commentForm = document.getElementById("comment-form");
+  const commentsContainer = document.getElementById("comments-container");
+
+  // إضافة تعليق
+  commentForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const username = document.getElementById("username").value.trim();
+    const comment = document.getElementById("comment").value.trim();
+
+    if (username && comment) {
+      try {
+        await addDoc(collection(db, "comments"), {
+          username,
+          comment,
+          createdAt: new Date()
+        });
+        commentForm.reset();
+        loadComments(); // إعادة تحميل التعليقات بعد الإضافة
+      } catch (error) {
+        console.error("خطأ أثناء إضافة التعليق: ", error);
+      }
+    }
+  });
+
+  // قراءة التعليقات
+  async function loadComments() {
+    commentsContainer.innerHTML = "";
+    const q = query(collection(db, "comments"), orderBy("createdAt", "desc"));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const commentElement = document.createElement("div");
+      commentElement.innerHTML = <strong>${data.username}:</strong> ${data.comment};
+      commentsContainer.appendChild(commentElement);
+    });
+  }
+
+  // تحميل التعليقات عند فتح الصفحة
+  loadComments();
+</script>
+
+
+
+
+
+
+
+    
+
+
+
     
 </body>
 </html>
