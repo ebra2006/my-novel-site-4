@@ -299,23 +299,11 @@ By : Ibrahim Mohamed
   <div id="comments-container"></div>
 </section>
 
-
-
-
-
-
-
-        
-
-
-
-
-
 <script type="module">
   // استيراد إعدادات Firebase
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
   import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
-  import { firebaseConfig } from "../firebase-config.js"; // غير المسار حسب مكان ملفك
+  import { firebaseConfig } from "../firebase-config.js"; // تأكد المسار صحيح حسب موقع ملفك
 
   // تهيئة Firebase
   const app = initializeApp(firebaseConfig);
@@ -327,19 +315,21 @@ By : Ibrahim Mohamed
   // إضافة تعليق
   commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const username = document.getElementById("username").value;
-    const comment = document.getElementById("comment").value;
+    const username = document.getElementById("username").value.trim();
+    const comment = document.getElementById("comment").value.trim();
 
-    try {
-      await addDoc(collection(db, "comments"), {
-        username,
-        comment,
-        createdAt: new Date()
-      });
-      commentForm.reset();
-      loadComments(); // إعادة تحميل التعليقات بعد الإضافة
-    } catch (error) {
-      console.error("خطأ أثناء إضافة التعليق: ", error);
+    if (username && comment) {
+      try {
+        await addDoc(collection(db, "comments"), {
+          username,
+          comment,
+          createdAt: new Date()
+        });
+        commentForm.reset();
+        loadComments(); // إعادة تحميل التعليقات بعد الإضافة
+      } catch (error) {
+        console.error("خطأ أثناء إضافة التعليق: ", error);
+      }
     }
   });
 
@@ -359,9 +349,6 @@ By : Ibrahim Mohamed
   // تحميل التعليقات عند فتح الصفحة
   loadComments();
 </script>
-
-
-
 
 
 
