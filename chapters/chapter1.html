@@ -293,16 +293,82 @@ By : Ibrahim Mohamed
 
 
 
+<div id="comments-section">
+  <h2>التعليقات</h2>
+
+  <form id="comment-form">
+    <input type="text" id="username" placeholder="اسمك" required />
+    <textarea id="message" placeholder="اكتب تعليقك" required></textarea>
+    <button type="submit">نشر التعليق</button>
+  </form>
+
+  <div id="comments-list"></div>
+</div>
+
+
+
+
+
+
+
 
 
         
 
-<button id="login-btn">Sign in with Google</button>
-<form id="comment-form">
-  <input type="text" id="comment-input" placeholder="اكتب تعليقك..." required>
-  <button type="submit">إرسال</button>
-</form>
-<div id="comments-section"></div>
+<script type="module">
+  import { db } from './firebase-config.js';
+  import {
+    collection,
+    addDoc,
+    getDocs,
+    query,
+    orderBy,
+    Timestamp
+  } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+  const form = document.getElementById("comment-form");
+  const commentsList = document.getElementById("comments-list");
+
+  // إرسال تعليق جديد
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const message = document.getElementById("message").value;
+
+    if (!username || !message) return;
+
+    await addDoc(collection(db, "comments"), {
+      username,
+      message,
+      timestamp: Timestamp.now()
+    });
+
+    form.reset();
+    loadComments(); // إعادة تحميل التعليقات بعد الإضافة
+  });
+
+  // تحميل التعليقات من Firebase
+  async function loadComments() {
+    commentsList.innerHTML = "";
+    const q = query(collection(db, "comments"), orderBy("timestamp", "desc"));
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      const data = doc.data();
+      const comment = document.createElement("div");
+      comment.innerHTML = <strong>${data.username}</strong>: ${data.message};
+      commentsList.appendChild(comment);
+    });
+  }
+
+  // تحميل التعليقات عند فتح الصفحة
+  loadComments();
+</script>
+        
+
+
+
 
 
         
